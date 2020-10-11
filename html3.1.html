@@ -1,8 +1,11 @@
+<!--
+Hãy tạo phong cách cho thẻ <p> như hình chụp
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bài 3.1</title>
     <style>
         p {
             border: 1px solid gray;
@@ -13,19 +16,24 @@
             background-color: cyan;
             font-size: 36px;
 
+            /* căn chỉnh dọc */
             display: table-cell; /* Thuộc tính display trong CSS cho phép chúng ta xác định kiểu hiển thị của các thẻ HTML trên website.*/
             vertical-align: middle;
             
-            background: cyan;
+            background: cyan url(https://previews.123rf.com/images/galagraph/galagraph1712/galagraph171200007/91479065-wide-format-abstract-colorful-grunge-background-place-for-text-paint-splashes-background-for-present.jpg) no-repeat center;
+            background-size:cover;
+            transform: rotate(15deg);
+
         }
     </style>
 </head>
 <body>
     <div style="display: table; height: 500px; width: 70%; margin: 50px; ">
-        <p>
-            HTML là ngôn ngữ đánh dấu nội dung. <br>
-            CSS là ngôn ngữ tạo kiểu cách cho nội dung. <br>
-            JavaScript là ngôn ngữ kịch bản làm cho nội dung thêm sinh động
+        <p style="color: blue;">
+            Yêu, là chết ở trong lòng một ít, <br>
+            Vì mấy khi yêu mà chắc được yêu? <br>
+            Cho rất nhiều, song nhận chẳng bao nhiêu <br>
+            Người ta phụ, hoặc thờ ơ, chẳng biết.
         </p>
     </div>
 </body>

@@ -1,0 +1,42 @@
+<!--Bài Tập HTML 3.2-Box Styling
+Hãy tạo phong cách cho thẻ <p> như hình chụp
+
+
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3.2</title>
+    <style>
+        p {
+            color: white;
+            font-size: 36px;
+            font-style: italic;
+            text-indent: 1em; /*Thuộc tính text-indent ghi rõ thụt đầu dòng của dòng đầu tiên trong một khối văn bản.*/
+            width: 600px;            
+            height: 150px;
+            /* đường viền*/
+            border: solid 1px gray;
+            border-radius: 50px;
+            /*hiệu ứng bóng râm*/
+            box-shadow: 10px 20px 10px gray; /*right bottom blur color*/
+            background-color: darkgreen;
+            /* lề trong lề ngoài*/
+            padding: 10px;
+            margin: 30px auto; /* cho ra giữa màn hình*/
+            
+
+
+        }
+    </style>
+
+</head>
+<body>
+    <p>
+        "Nam quốc sơn hà nam đế cư. <br>
+        Tiệt nhiên định phận tại thiên thư."<br> <span style="padding-left: 300px;">-Lí Thường Kiệt-</span>
+        <!-- Thuộc tính padding thêm vào khoảng không cho thành phần.-->
+    </p> 
+</body>
+</html>
