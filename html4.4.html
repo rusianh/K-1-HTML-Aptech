@@ -7,6 +7,7 @@ Hãy tạo hiệu hoạt họa như sau:
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,17 +18,23 @@ Hãy tạo hiệu hoạt họa như sau:
             height: 300px;
             background-color: red;
 
-            position: relative; /*https://topdev.vn/blog/tim-hieu-thuoc-tinh-position-trong-css/#ftoc-heading-3
+            position: relative;
+            /*https://topdev.vn/blog/tim-hieu-thuoc-tinh-position-trong-css/#ftoc-heading-3
                                 https://techmaster.vn/posts/34899/su-khac-biet-giua-css-position-absolute-voi-relative*/
 
-            animation: dich_chuyen 5s infinite;  /*https://hocwebchuan.com/reference/cssSection/css3/pr_animation.php*/   
+            animation: dich_chuyen 5s infinite;
+            /*https://hocwebchuan.com/reference/cssSection/css3/pr_animation.php*/
         }
+
         @keyframes dich_chuyen {
-            from { /* khai báo khung hình 1: 0% quãng thời gian */
+            from {
+                /* khai báo khung hình 1: 0% quãng thời gian */
                 top: 0px;
                 left: 0px;
             }
-            to { /* khai báo khung hình 2: 100% quãng thời gian */
+
+            to {
+                /* khai báo khung hình 2: 100% quãng thời gian */
                 top: 400px;
                 left: 400px;
                 width: 100px;
@@ -35,13 +42,16 @@ Hãy tạo hiệu hoạt họa như sau:
                 border: solid 5px gray;
                 border-radius: 10px;
                 background: cyan;
-                transform: rotate(360deg); /*https://hocwebchuan.com/reference/cssSection/css3/pr_transform.php*/
+                transform: rotate(360deg);
+                /*https://hocwebchuan.com/reference/cssSection/css3/pr_transform.php*/
             }
 
         }
     </style>
 </head>
+
 <body>
     <p>Việt Anh Vũ</p>
 </body>
+
 </html>

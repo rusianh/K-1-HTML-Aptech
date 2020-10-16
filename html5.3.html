@@ -1,21 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 5.3</title>
+    <style>
+        body {
+            background-color: cyan;
+            font-size: 32px;
+        }
+
+        th {
+            background-color: darkcyan;
+        }
+
+        td {
+            background-color: darksalmon;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+
+        .tensinhvien {
+            text-align: center;
+        }
+
+        .monhoc {
+            width: 150px;
+            text-align: center;
+        }
+
+        .diem {
+            width: 200px;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #fff;
+            padding: 3px;
+        }
+    </style>
 </head>
+
 <body>
     <table>
-        <caption>Bảng mua sắm thiết bị di đông 2012</caption>
+        <caption>Bảng điểm sinh viên</caption>
         <tr>
             <th>Tên học sinh</th>
-            <th></th>
-            <th>Giá Thành</th>
+            <th>Môn</th>
+            <th>Điểm các môn</th>
         </tr>
         <tr>
-
+            <td rowspan="4" class="tensinhvien">Lan</td>
+            <td class="monhoc">Toán</td>
+            <td class="diem">8.5</td>
+        </tr>
+        <tr>
+            <td class="monhoc">Lý</td>
+            <td class="diem">7.5</td>
+        </tr>
+        <tr>
+            <td class="monhoc">Hóa</td>
+            <td class="diem">7.0</td>
+        </tr>
+        <tr>
+            <td colspan="2">Tổng điểm</td>
+        </tr>
+        <tr>
+            <td rowspan="4" class="tensinhvien">Tuấn</td>
+            <td class="monhoc">Văn</td>
+            <td class="diem">6.8</td>
+        </tr>
+        <tr>
+            <td class="monhoc">Sử</td>
+            <td class="diem">9.0</td>
+        </tr>
+        <tr>
+            <td class="monhoc">Địa</td>
+            <td class="diem">7.4</td>
+        </tr>
+        <tr>
+            <td colspan="2">Tổng điểm</td>
         </tr>
     </table>
 </body>
+
 </html>
