@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bài 6.1</title>
 </head>
 <body>
     <form>
@@ -22,7 +22,77 @@
         </fieldset>
         <fieldset>
             <legend>Ngày sinh</legend>
+            <label>Ngày</label>
+            <input type="date">
+            <label>Giờ</label>
+            <input type="time">
             
+        </fieldset>
+
+        <fieldset>
+            <legend>Địa Chỉ</legend>
+            <label>Địa chỉ nhà</label>
+            <input type="text">
+            <label>Mã bưu điên</label>
+            <input type="text>">
+        </fieldset>
+
+        <fieldset>
+            <legend>Thông tin liên hệ</legend>
+            <label>Điện thoại</label>
+            <input type="text">
+            <label>Email</label>
+            <input type="text">
+            <label>Website</label>
+            <input type="text">
+        </fieldset>
+
+        <fieldset>
+            <legend>Sở thích cá nhân</legend>
+            <label>Đọc sách</label>
+            <input type="checkbox>">
+            <label>Nghe nhạc</label>
+            <input type="checkbox>">
+            <label>Xem phim</label>
+            <input type="checkbox>">
+            <label>Màu ưa thích</label>
+            <input type="color">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Chỉ số sức khỏe</legend>
+            <label>Chiều cao (cm)</label>
+            <input type="number" min="100" max="200" value="165" step="1">
+            
+            <label>Cân nặng [45-100kg]</label>
+            <input type="range" min="45" max="100">
+
+            <label>Nhịp tim [60-100 nhịp/phút]</label>
+            <meter min="60" max="100" value="70"></meter>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Phương thức thanh toán</legend>
+            <fieldset>
+                <legend>Thẻ tín dụng</legend>
+                
+                <label>Visa</label>
+                <input type="radio">
+                
+                <label>Master card</label>
+                <input type="radio">
+
+                <label>Discover</label>
+                <input type="radio">
+            </fieldset>
+
+            <label>Số thẻ</label>
+            <input type="text">
+
+            <label>Ngày hết hạn</label>
+            <input type="date">
         </fieldset>
     </form>
 </body>
