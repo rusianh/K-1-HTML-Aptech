@@ -10,3 +10,4 @@ Gợi Ý: dùng hàm replaceAll();
 var insert_string = "Samsung là Samsung hay Samsung";
 var new_string_apple = insert_string.replaceAll('Samsung', 'Apple');
 console.log("chuỗi mới là: "+ new_string_apple);
+
