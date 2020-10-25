@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Nus</title>
+    <style>
+        /* bo cuc */
+        body {
+            margin: 0;
+            padding: 0 5%;
+        }
+
+        header, nav {
+            clear: both;
+        }
+
+        section {
+            float: left;
+            width: 70%;
+        }
+
+        aside {
+            float: left;
+            width: 30%;
+        }
+
+        footer {
+            clear: both;
+        }
+
+        /* chi tiet */
+        body {
+            font: Helvetica, 0.99em, black;
+        }
+
+        header h1 {
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* thanh dieu huong */
+        nav {
+            background-color: #e7e7e7;
+            padding: 5px;
+        }
+
+        nav a {
+            color: #999999;
+            text-decoration: none;
+            padding: 0 5px;
+        }
+
+        nav a:hover {
+            color: black;
+            border-bottom: orange solid 3px;
+        }
+
+        footer {
+            color: white;
+            background-color: #003062;
+            text-align: center;
+            padding: 10px;
+            clear: both;
+        }
+
+        article img {
+            display: block;
+            margin: auto;
+        }
+
+        /* quan ly form */
+        label, input, select, textarea {
+            display: block;
+            float: left;
+        }
+        label {
+            clear:left;
+            width: 150px;
+	    text-align: right;
+	    margin-right: 10px;
+        }
+
+        .clear_float {
+            clear: both;
+        }
+        
+        input, select, textarea {
+            margin: 0 0 10px 0;
+        }
+
+        fieldset {
+            border: 1px solid darkgray;
+            margin:  30px 0;
+            padding: 15px;
+
+        }
+
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        form {
+            width: 60%;
+            margin: auto;
+        }
+
+        aside a img {
+            display: block;
+            width: 284px;
+            margin: 15px;
+
+        }
+
+        aside a img:hover {
+            border: 1px gray solid;
+            transform: scale(1.1);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <img src="html9.1\data\images\logo.png" style="float: left; display: block;" />
+        <h1 style="float: left; display: block;">Welcome to National University</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Admissions</a>
+            <a href="#">Education</a>
+            <a href="#">Rerearch</a>
+            <a href="#">About</a>
+            <a href="#">Scholarship</a>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <h1>A leading global University centred in Asia</h1>
+            <img src="html9.1\data\images\slide1.jpg" />
+            <p>Infinite possibilities. We offer a global and Asisan experience that is broad , deep and rigorous .
+                An NUS education is recognized as among the best Asia , and the world.
+                Many of our undergraduate schools also offer graduate programmer.
+                Whichever course you choose, your experience will be intellectually fulflilling within and outside the
+                classroom.
+                We aspire to influence the future . By changing the way people think and do things through education,
+                research and service .</p>
+        </article>
+
+        <hr>
+        <h1>Join Us Now</h1>
+
+        <form>
+            <fieldset>
+                <legend>Fill your information to the form below</legend>
+
+                <label>Full Name</label>
+                <input name="firstname" type="text" required pattern="[a-zA-Z]{3,30}" />
+
+                <label>Email</label>
+                <input name="email" type="text" required pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-
+                9-.]+$" />
+
+                <label>Age</label>
+                <input name="age" type="text" required min="15" max="150" />
+
+                <label>Interested</label>
+                <select name="Interested" required>
+                    <option>Arts</option>
+                    <option>Business</option>
+                    <option>Computing</option>
+                    <option>Dentistry</option>
+                    <option>Design</option>
+                    <option>Engineering</option>
+                    <option>Law</option>
+                    <option>Medicine</option>
+                    <option>Music</option>
+                    <option>Science</option>
+
+                </select>
+
+                <label>Address</label>
+                <textarea name="adress" type="text" required max="150"></textarea>
+
+
+                <label>Describle yourself</label>
+                <textarea name="des_yours" type="text" required placeholder="Required, max=150 characters"></textarea>
+
+                <label></label>
+                <input type="submit" value="Send" />
+
+            </fieldset>
+        </form>
+    </section>
+
+    <aside>
+        <H3>Links</H3>
+        <a href="#"><img src="html9.1\data\images\cambridge.jpg" /></a>
+        <a href="#"><img src="html9.1\data\images\oxford.png" /></a>
+        <a href="#"><img src="html9.1\data\images\mitsd.jpg" /></a>
+        <a href="#"><img src="html9.1\data\images\mit.jpg" /></a>
+        <a href="#"><img src="html9.1\data\images\mit.jpg" /></a>
+
+    </aside>
+
+    <footer>
+        &copy; National University of Singapore. All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
