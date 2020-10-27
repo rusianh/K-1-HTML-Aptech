@@ -111,12 +111,17 @@
             display: block;
             width: 284px;
             margin: 15px;
+            transition-duration: 2s;
 
         }
 
         aside a img:hover {
             border: 1px gray solid;
             transform: scale(1.1);
+        }
+
+        body header img {
+            transition: transform 2s;
         }
 
     </style>
@@ -210,6 +215,20 @@
     <footer>
         &copy; National University of Singapore. All Rights Reserved.
     </footer>
+
+    <script>
+        var imgs = ["slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg"];
+
+        var i = 0;
+
+        document.querySelector.('section article img').style.transition = '2s' ;
+
+        document.querySelector('section article img').onclick = function() {
+            this.src = imgs[(++i) % imgs.length];
+        }
+
+
+    </script>
 
 </body>
 
