@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Home NUS</title>
+<style>
+
+    /* Quản Lý Bố Cục Tài Liệu */
+	body    { margin: 0; padding: 0 5%; }
+
+	header nav {clear: both;}
+
+	main { float: left; width: 70%; }
+
+	aside   { float: left; width: 30%; }
+
+	footer  { clear: both; }
+
+    /* Quản Lý Chi Tiết Các Khu Vực */
+	body
+	{
+		font: Helvetica, 0.99em, black;
+	}
+
+	header h1 {padding: 30px; font-family: Arial, Helvetica, sans-serif}
+
+    /* Quản Lý Menu Ngang (Thanh Điều Hướng) */
+	nav 
+	{
+		background-color: #e7e7e7;	
+		padding: 5px;
+		margin: 5px;
+		text-align:center;
+	}
+
+	nav a
+	{
+		padding: 5px;
+		text-decoration: none;
+		width: 300px;
+		background: #e7e7e7;
+		color: #999999;
+		font-weight: bold;
+		text-align: center;		
+	}
+
+	nav a:hover
+	{
+		text-decoration: none;
+		width: 300px;
+		background: #e7e7e7;
+		color: black;
+		text-align: center;
+		border-bottom: solid 3px orange;
+	}
+
+    /* Quản Lý Bài Viết */
+	article img
+	{
+		display:block;
+		margin:0 auto;
+	}
+
+    /* Quản Lý Chân Tài Liệu */
+	footer
+	{
+		padding:10px;
+		background-color:#003062;		
+	
+		color:white;
+		text-align:center;
+		clear: both;
+	}
+
+    /* Quản Lý Form */
+	label, input, select, span, textarea 
+    {
+	    display: block;
+	    float: left;
+    }
+
+    label 
+    {
+	    clear: left;
+	    width: 150px;
+	    text-align: right;
+	    margin-right: 10px;
+    }
+
+    input, select, textarea
+    {
+        margin:  0 0 10px 0;	
+    }
+
+    .clear_float 
+    {
+	    clear: both;
+    }
+
+    fieldset 
+    {
+        background: lightgray;
+        border:  1px solid darkgray;
+        margin:  30px 0;
+        padding:  15px;
+    }
+
+    legend 
+    {
+        font-size:  20px;
+        font-weight:  bold;
+    }
+
+    form 
+    {
+	    width: 60%;
+	    margin: auto;
+    }
+
+    /* Quản Lý Nội Dung Phụ (Bên Phải)*/
+	aside a img
+	{
+		display:block;
+		width:284px;
+		margin:15px;
+
+		transition: transform 1s;
+	}
+
+	aside a img:hover
+	{
+        border: 1px gray solid;
+        transform: scale(1.1);
+	}
+
+</style>
+</head>
+
+<body>
+	<header>
+<!-- 		<img src="logo.png" style="display:block; float: left;"/> -->
+        <div style="float:left; width: 25%; height:160px;background: url(logo.png);background-size: cover;">&nbsp;</div>
+		<h1 style="float: left;width: 70%; text-align:center;">Welcome to National University of Singapore</h1>
+		
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">Admissions</a>
+			<a href="#">Education</a>
+			<a href="#">Rerearch</a>
+			<a href="#">About</a>
+			<a href="#">Scholarship</a>
+		</nav>
+	</header>
+            
+    <main>
+        <article>
+            <h1>A leading global university centred in Asia</h1>
+
+<!--             <img src="slide1.jpg" /> -->
+            <div id="slide" style="margin: 0 auto; width: 60%; height: 300px; background: url('slide1.jpg'); background-size: cover;"></div>
+            <p>
+                Infinite possibilities. We offer a global and Asisan experience that is broad , deep and rigorous . 
+                An NUS education is recognized as among the best Asia , and the world. 
+                Many of our undergraduate schools also offer graduate programmer. 
+                Whichever course you choose, your experience will be intellectually fulflilling within and outside the classroom. 
+                We aspire to influence the future . By changing the way people think and do things through education, research and service .
+            </p>
+        </article>
+            	
+        <hr />
+        <h1>John Us Now</h1>
+                        
+        <form action="" method="post" onSubmit="return validate(this)">
+            <fieldset>
+
+                <legend>Fill your information to the  form below:</legend>
+				<label>Full Name:</label>
+				<input type="text" name="fullname" required pattern="^[a-zA-Z]{2,}(?: [a-zA-Z]+){0,2}$" title="Bắt đầu với w,tối thiểu là 10 ký tự và nhiều nhất là 30 ký tự" placeholder="Le Minh Hoa"/>
+
+				<label>Email:</label>
+				<input type="email" name="email" required pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" placeholder="you@where.com" />
+
+				<label>Age:</label>
+				<input type="number" name="age" required min="15" max="45" placeholder="from 15-45" style="width: 160px;"/>
+
+				<label>Interested:</label>   
+				<select name="interested" required>
+					<option value="arts">Arts</option>
+					<option value="business">Business</option>
+					<option value="computing">Computing</option>
+					<option value="dentistry">Dentistry</option>
+					<option value="design">Design</option>
+					<option value="engineering">Engineering</option>
+					<option value="law">Law</option>
+					<option value="medicine">Medicine</option>
+					<option value="music">Music</option>
+					<option value="science">Science</option>
+				</select>
+
+				<label>Address:</label>
+				<textarea name="address" maxlength="150" placeholder="Maximum 150 characters" required></textarea>
+
+				<label>Describe yourself:</label>
+				<textarea name="describe" maxlength="150" placeholder="Maximum 150 characters" required></textarea>
+
+				 <label>&nbsp;</label>
+				<input type="submit" value="Send"/>   
+            </fieldset>             	
+                               
+        </form>
+    </main>
+
+    <aside>
+            	<h4>Links to Other Universities</h4>
+                <a href="#"><img src="cambridge.jpg"/></a>
+                <a href="#"><img src="oxford.png"/></a>
+                <a href="#"><img src="mitsd.jpg"/></a>
+                <a href="#"><img src="mit.jpg"/></a>
+                <a href="#"><img src="chicago.png"/></a>
+    </aside>
+       
+        
+   <footer>
+       &copy; National University of Singapore. All Rights Reserved.
+   </footer>
+
+   <script>
+		// Mảng các bức ảnh:
+		var imgs = ["slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg"];
+
+		// Chỉ số của bức ảnh hiện tại
+		var i = 0;
+
+        // Thời gian dịch chuyển giữa các ảnh trên slideshow
+        document.querySelector('div#slide').style.transition = '2s';
+
+		// Khi người dùng nhấp chuột vào bức ảnh thì
+		// tăng biến đếm i lên 1 đơn vị và thay đổi giá trị của 'src'
+		// sang đường dẫn của bức ảnh tiếp theo.
+		document.querySelector('div#slide').onclick = function(){
+			this.style.backgroundImage = 'url('+imgs[(++i) % imgs.length]+')';
+		}
+
+	</script>
+    
+    <script>
+		
+		// Mảng các bức ảnh:
+// 		var imgs = ["slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg"];
+
+		// Chỉ số của bức ảnh hiện tại
+// 		var i = 0;
+
+        // Đoạn mã này vô tác dụng vì transition chỉ có tác dụng trên
+        // css property chứ không làm gì được html attributes.
+        // Muốn chuyển dịch ảnh thì phải dùng css background.
+//         document.querySelector('article img').style.transition = 'src 2s';
+
+		// Khi người dùng nhấp chuột vào bức ảnh thì
+		// tăng biến đếm i lên 1 đơn vị và thay đổi giá trị của 'src'
+		// sang đường dẫn của bức ảnh tiếp theo.
+
+// 		document.querySelector('article img').onclick = function(){
+// 			this.src = imgs[(++i) % imgs.length]
+// 		}
+	</script>
+
+	<script>
+        document.querySelector('form').onsubmit = function(e)
+        {
+        	e.preventDefault();
+
+            alert('Your info saved successfully. Thanks !');
+            
+        	this.submit();
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿body {
+    background:url('background.jpg') repeat-x; 
+    padding-left:2%;
+    padding-right:2%;
+    background-size:cover;
+}
+header h1, header h2
+{
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+header h1{
+   
+    font-size:300%;
+    
+}
+header h2{
+   
+    font-size:170%;
+}
+
+    /* ĐIỀU HƯỚNG */
+nav {
+    background: url('bar.jpg') repeat-x;
+    background-size: cover;
+    height:20px;    /* độ cao 70 trừ đi padding */
+    text-align:center;
+    color: white;
+    padding: 25px 0; /* lề trong top và bottom bị can thiệp */
+}
+nav a
+{
+    color:white;
+    font-size:14px;
+    text-decoration:none;
+    padding:0 25px;
+}
+nav a:hover
+{
+    text-decoration:underline;
+}
+
+    /* ẢNH QUẢNG CÁO */
+section {
+    padding: 0.5%;
+    background: white;
+}
+section img
+{
+    width:100%;
+}
+
+    /* NỘI DUNG PHỤ: Tổng độ rộng của article, aside là 80+16=96%, còn lại 4% dành cho padding lề trong của article và aside */
+article
+{
+    width :80%;
+    background:lightgray;
+}
+aside {
+    width: 16%;
+    background: darkgrey;
+   
+}
+aside h3, aside p{
+    color:#fbf5f5;
+}
+article h2, aside h2
+{
+    color:blue;
+}
+
+article,aside
+{
+     min-height:550px;
+     float:left;
+     padding: 1%;
+}
+
+    /* CHÂN TÀI LIỆU */
+footer
+{
+    background: url(bar.jpg) repeat-x;
+    height:70px;
+    text-align:center;
+    clear:both;
+    color:white;
+    padding-top:30px;
+}
+footer a
+{
+    color:white;
+    padding-top:30px;
+}
+
+

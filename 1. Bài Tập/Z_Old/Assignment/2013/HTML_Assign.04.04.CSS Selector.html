@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Ngoài Trang</title>
+<style>
+/*
+ Bộ chọn (selector) được dùng để chọn ra thành phần trên trang HTML
+ mà ta muốn tạo kiểu dáng (css) cho nó.
+ @see http://hocwebchuan.com/reference/cssSection/se_selector.php
+ Selector Types:
+ Class (Can apply to any HTML Element)
+ ID (Apply to only one HTML Element)
+ Tag (Redefines an HTML Element)
+ Compound (Based on your selection)
+ 
+*/
+.cat 
+{
+	color:blue;
+	font-size:40px;
+}
+
+/* mèo Mĩ chăm tập thể dục nên trông thanh mảnh */
+.us_cat
+{
+	border: solid 2px blue;
+}
+
+/* mèo Nhật Bản lười tập thể dục nên trông cái gì cũng đậm, cũng béo */
+.jp_cat
+{
+	border: solid 10px red;
+}
+/* mèo Việt Nam trông bình thường*/
+.vn_cat
+{
+	border: solid 5px gray;
+}
+
+/* Mèo Tom bao giờ cũng cao hơn mèo Doreamon và mèo mướp */
+#tom {
+	font-size:90px;	
+	font-weight:lighter; /* mèo Tom nhìn thanh mảnh */
+}
+#doreamon
+{
+	font-size: 70px;	
+	font-weight: bolder; /* mèo Doreamon nhìn béo ú */
+}
+
+#muop
+{
+	font-size: 50px;	
+	font-weight: normal; /* mèo Mướp nhìn bình thường */
+}
+</style>
+</head>
+<body>
+<p class="cat us_cat" id="tom">Hello! Tớ là mèo Tom đến từ Mĩ</p>
+<div class="cat jp_cat" id="doreamon">Konichiwa! Tớ là mèo Doreamon đến từ Nhật Bản</div>
+<br>
+<div class="cat vn_cat" id="muop">Xin chào! Tớ là mèo Mướp đến từ Việt Nam</div>
+</body>
+</html>

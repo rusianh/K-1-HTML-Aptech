@@ -1,0 +1,220 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+
+<script language="Javascript">
+
+function validFrm()
+{
+var error = "";
+
+//check username
+strng=document.forms[0].name.value;
+if (strng == "") {
+
+   error = "Xin vui lòng điền Tên!\n";
+}
+//check sex
+strng=document.forms[0].sex.value;
+if (strng=="")
+{
+error=error+"Xin vui lòng điền Giới tính!\n";
+}
+
+
+//check address
+strng=document.forms[0].S1.value;
+  if (strng.length == 0) {
+
+     error =error+ "Xin vui lòng điền Địa chỉ!\n"
+  }
+ //check email
+strng=document.forms[0].email.value;
+if (strng == "") {
+
+   error =error+ "Xin vui lòng điền Địa chỉ email!\n";
+   
+}
+ else
+ {
+    var emailFilter=/^.+@.+\..{2,3}$/;
+    if (!(emailFilter.test(strng))) { 
+
+	   error =error+ "Địa chỉ email không hợp lệ!\n";
+    }
+    else {
+//test email for illegal characters
+       var illegalChars= /[\(\)\<\>\,\;\:\\\"\[\]]/
+         if (strng.match(illegalChars)) {
+          error = error+"Địa chỉ email không hợp lệ!\n";
+       }
+    }
+}
+//check phone
+strng=document.forms[0].phone.value;
+if (strng == "") {
+
+   error = error+"Xin vui lòng điền Điện thoại!\n";
+}
+else
+{
+var stripped = strng.replace(/[\(\)\.\-\ ]/g, ''); //strip out acceptable non-numeric characters
+    if (isNaN(parseInt(stripped))) {
+       error =error+ "Điện thoại không hợp lệ!\n";
+  
+    }
+	else
+	{ //kiem tra do dai tu 7-10 ki tu
+	    if (stripped.length<7 ||stripped.length>10) {
+       error =error+ "Điện thoại không hợp lệ!\n";
+  
+    }
+
+	
+	}
+	
+}	
+ //check ngaysinh
+ 
+strng=document.forms[0].T1.value;
+if (strng == "") {
+
+   error = error+ "Xin vui lòng điền Ngày sinh!\n";
+}
+else
+{
+// ngay sinh dung dinh dang ngay thang 
+ var validformat=/^\d{1,2}\/\d{1,2}\/\d{4}$/ //Basic check for format validity
+
+if (!validformat.test(strng))
+error=error+"Ngày sinh không hợp lệ!\n";
+else
+{ //valid date ranges
+var monthfield=strng.split("/")[0]
+var dayfield=strng.split("/")[1]
+var yearfield=strng.split("/")[2]
+var dayobj = new Date(yearfield, monthfield-1, dayfield)
+alert (dayobj);
+if ((dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield)||(dayobj.getFullYear()!=yearfield))
+error=error+"Ngày sinh không hợp lệ!\n";
+}
+}
+
+ //check Nghe nghiep
+ 
+strng=document.forms[0].T2.value;
+if (strng == "") {
+
+   error = error+ "Xin vui lòng điền Nghề nghiệp!\n";
+}
+ //check ky thi
+ 
+strng=document.forms[0].thoigian.value;
+if (strng == "") {
+
+   error = error+ "Xin vui lòng điền Kỳ thi!\n";
+}
+ //check nguon tin
+ 
+strng=document.forms[0].nguon.value;
+if ((strng == "")|| (strng=="_") ){
+
+   error = error+ "Xin vui lòng điền Nguồn tin!\n";
+}
+
+
+if (error!="")
+{alert (error)
+return false;
+}
+else 
+return true;
+}
+
+  </script>
+</head>
+
+<body style="color:#FFFFFF; background-color:#0066FF">
+<form action="mail.asp" name="frm" onSubmit="return validFrm();" method="POST">
+  <table width="" border="0" align="center" cellpadding="0" cellspacing="0" >
+    <tr>
+      <td style="padding-top:0px" align="center" class="form-header"><p>&#272;&#258;NG K&Yacute; D&#7920; THI HỌC BỔNG</p>
+      <p>&nbsp;</p></td>
+    </tr>
+    <tr>
+      <td><table width="351" border="0" cellspacing="0" cellpadding="0" height="239">
+          <tr>
+            <td class="form-input" height="21" width="130">H&#7885; v&agrave; T&ecirc;n</td>
+            <td height="21" width="201"><input name="name" type="text" class="form-box" size="25">
+              *</td>
+          </tr>
+          <tr>
+            <td class="form-input" height="20" width="130"> Gi&#7899;i t&iacute;nh</td>
+            <td height="20" width="201"><select size="1" name="sex">
+                <option value="male" selected>Nam</option>
+                <option value="Female">N&#7919;</option>
+              </select>
+              * </td>
+          </tr>
+          <tr>
+            <td class="form-input" height="21" width="130">&#272;&#7883;a ch&#7881; </td>
+            <td height="21" width="201"><textarea rows="2" name="S1" cols="20"></textarea>
+              *</td>
+          </tr>
+          <tr>
+            <td class="form-input" height="21" width="130">Email</td>
+            <td height="21" width="201"><input name="email" type="text" class="form-box" size="25">
+              * </td>
+          </tr>
+          <tr>
+            <td class="form-input" height="21" width="130">&#272;i&#7879;n tho&#7841;i </td>
+            <td height="21" width="201"><input name="phone" type="text" class="form-box" size="20">
+              *</td>
+          </tr>
+          <tr>
+            <td class="form-input" height="23" width="130"> Ng&agrave;y sinh</td>
+            <td class="form-submit-position" height="23" width="201"><input type="text" name="T1" size="20">
+              * mm/dd/yyyy</td>
+          </tr>
+          <tr>
+            <td class="form-input" height="13" width="130"> Ngh&#7873; nghi&#7879;p</td>
+            <td class="form-submit-position" height="13" width="201"><input type="text" name="T2" size="20">
+              * </td>
+          </tr>
+          <tr>
+            <td class="form-input" height="22" width="130"> K&#7923; thi</td>
+            <td class="form-submit-position" height="22" width="201"><select size="1" name="thoigian">
+                <option selected>L&#7921;a ch&#7885;n</option>
+                <option value="5">Th&aacute;ng 5</option>
+                <option value="6">Th&aacute;ng 6</option>
+                <option value="7">Th&aacute;ng 7</option>
+              </select>
+              * </td>
+          </tr>
+          <tr>
+            <td class="form-input" height="21" width="130"> B&#7841;n bi&#7871;t &#273;&#7871;n Aprotrain-Aptech qua ngu&#7891;n tin n&agrave;o?</td>
+            <td class="form-submit-position" height="21" width="201"><select size="1" name="nguon">
+                <option selected value="_">L&#7921;a ch&#7885;n </option>
+                <option value="B&aacute;o ch&iacute;">B&aacute;o ch&iacute;</option>
+                <option value="Ti vi">Ti vi</option>
+                <option value="B&#7841;n b&egrave;">B&#7841;n b&egrave;</option>
+                <option value="Th&#432; c&#7911;a trung t&acirc;m">Th&#432; c&#7911;a trung t&acirc;m</option>
+                <option value="Kh&aacute;c">Kh&aacute;c</option>
+              </select>
+              * </td>
+          </tr>
+          <tr>
+            <td class="form-input" height="1" width="130"></td>
+            <td class="form-submit-position" height="1" width="201"><br />
+                <input style="FONT-SIZE: 8pt; FONT-FAMILY: Verdana" type="submit" value="&#272;&#259;ng k&yacute;" name="submit" /></td>
+          </tr>
+        </table>
+          <p> <I>(*): Th&ocirc;ng tin b&#7855;t bu&#7897;c</i> </td>
+    </tr>
+    <tr> <br />
+    </tr>
+  </table>
+</form>
+</body>
+</html>

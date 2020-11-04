@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML_Exam</title>
+<link href="style/main.css" rel="stylesheet"/>
+<script>
+	i=0;
+	function changeImages()
+	{
+		img = document.getElementById("img");
+		images= ["images/slide1.jpg","images/slide2.jpg","images/slide3.jpg","images/slide4.jpg"];
+		++i;
+		img.src =images[i%images.length];
+	}	
+	function sendForm()
+	{
+		alert("Your information have been saved sucessfull!!.Thanks you.");
+		return true;
+	}
+</script>
+</head>
+
+<body>
+	<div id="page">
+    	<header id="logo">
+        	<img src="images/logo.png"/>
+        </header>
+    	<main>
+        	<nav id="menu">
+            	<ul>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Admissions</a></li>
+                     <li><a href="#">Education</a></li>
+                     <li><a href="#">Rerearch</a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Scholarship</a></li>
+               </ul>
+            </nav>
+            <div id="content">
+            	<p class="title">A leading global university centred in Asia</p>
+                <img id="img" src="images/slide1.jpg" class="img-title" onclick="changeImages()" />
+                <p class="text-content">
+                	Infinite possibilities. We offer a global and Asisan experience that is broad , deep and rigorous . An NUS education is recognized as among the best Asia , and the world. Many of our undergraduate schools also offer graduate programmer. Whichever course you choose, your experience will be intellectually fulflilling within and outside the classroom. We aspire to influence the future . By changing the way people think and do things through education, research and service .
+                </p>
+                <hr />
+                   	  <h1>John Us Now</h1>
+                        
+                        <p>Fill your information to the  form below:</p>
+                    	<form action="" method="post" onSubmit="return sendForm()">
+                        	<table>                          
+                              <tr>
+                                <td>Full Name:</td>
+                                <td><input type="text" name="fullname" id="fullname" pattern="^[\w]{10,30}$" required title="Bắt đầu với w,tối thiểu là 10 ký tự và nhiều nhất là 30 ký tự" class="input" required/></td>
+                              </tr>
+                              <tr>
+                                <td>Email:</td>
+                                <td><input type="email" name="email" id="email" placeholder="VD:teddy@bear.com" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" class="input" required/></td>
+                              </tr>
+                              <tr>
+                                <td>Age:</td>
+                                <td><input type="number" name="age" id="age"  min="15" max="45" placeholder="15< Age <45" class="input" required/></td>
+                              </tr>
+                              <tr>
+                                <td>Interested:</td>
+                                <td>
+                                	<select name="interested" id="interested" required>
+                                    	<option value="arts">Arts</option>
+                                        <option value="business">Business</option>
+                                        <option value="computing">Computing</option>
+                                        <option value="dentistry">Dentistry</option>
+                                        <option value="design">Design</option>
+                                        <option value="engineering">Engineering</option>
+                                        <option value="law">Law</option>
+                                        <option value="medicine">Medicine</option>
+                                        <option value="music">Music</option>
+                                        <option value="science">Science</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Address:</td>
+                                <td><textarea name="address" id="address" maxlength="150" class="input" placeholder="Tối đa 150 ký tự" required></textarea></td>
+                              </tr>
+                              <tr>
+                                <td>Describe yourself:</td>
+                                <td><textarea name="describe" id="describe" maxlength="150" class="input" placeholder="Tối đa 150 ký tự" required></textarea></td>
+                              </tr>
+                              <tr>
+                                <td colspan="2" id="button">
+                                	<input type="submit" value="Send" class="button"/>
+                                </td>
+                              </tr>
+                            </table>
+                        </form>
+            </div>
+            <aside id="adv">
+            	<h4>Links</h4>
+                <a href="#"><img src="images/cambridge.jpg"/></a>
+                <a href="#"><img src="images/oxford.png"/></a>
+                <a href="#"><img src="images/mitsd.jpg"/></a>
+                <a href="#"><img src="images/mit.jpg"/></a>
+                <a href="#"><img src="images/chicago.png"/></a>
+            </aside>
+        </main>
+        <p></p>
+        <footer>
+        	<div id="footer">©National University of Singapore.All Right Reserved</div>
+        </footer>
+    </div>
+</body>
+</html>

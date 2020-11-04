@@ -1,0 +1,311 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-image:url(../img/oscars-statuette-1.gif);	
+		background-size: 25px 40px;
+	background-repeat:repeat;
+}
+
+/* 
+ Viết đề phong cách của Spry Menu Bar.
+ Khi chuột di ra ngoài thì link có màu xanh lá cây đậm,
+ khi chuột di vào thì link có màu xanh lá cây nhạt.
+ */
+ul.MenuBarHorizontal a
+{
+	background-color: #ADB96E;
+}
+
+ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
+{
+	background-color: #C6D580;
+	color: #FFF;
+}
+
+ul.MenuBarHorizontal li 
+{
+	width: 6em;	
+}
+
+/* 
+ Hộp Tìm Kiếm 
+ Bảng Màu Xám: #ccc; #bcbcbc; #757575; #999; whiteSmoke;
+ */
+#search-box
+{
+	display: block;
+	float: right;
+	margin: 7px; 
+	
+	border-radius: 15px;
+	border: none;
+    border-bottom:1px solid #ccc;
+	background: white url('../img/search.png') no-repeat;
+	background-size: 35px 35px;
+	
+	font-size: 18px;
+	color: #999; 
+	padding:6px 15px 6px 30px; /* căn lề trong bên phải padding-right = đường kính bo tròn border-radius */
+	
+	width: 160px;
+	transition: width 2s;
+	
+}
+
+#search-box:focus
+{
+	/* không chạy, vẫn đè lên menu, nên phải tạm bỏ menu contact.
+	position: relative;
+	top: 0;
+	right: 0;
+	z-index:100;
+	*/
+	width: 300px;	
+	outline: none; /* gỡ bỏ đường viền khi test trên Chrome */
+}
+
+.scrollToTop
+{
+	width:40px; 
+	height:40px;
+	text-align:center; 
+	
+	background: #ccc;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius:50%;
+	
+	position:fixed;
+	bottom:60px;
+	right:90px;
+	display:none;
+}
+.scrollToTop:hover
+{
+	text-decoration:none;
+	background:white;
+}
+
+/* order form style */
+label, input ,select, progress, meter, textarea
+{
+	display: block;
+	float: left;
+}
+
+label 
+{
+	clear: left;
+	
+	width: 11em;
+	text-align: right;
+	margin-right: 0.5em;
+}
+
+input, select
+{
+    margin:  0 0 .5em 0;	/* top right bottom left */
+}
+
+.clear_float 
+{
+	clear: both;
+	height: 0px;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+/* more style for fieldset and legend : 
+Can keep this part from the LAB */
+/*
+ @todo.1 Add more styles to fieldsets and legends.
+ @todo.1 Thêm kiểu cách cho khung thông tin và chú thích của khung.
+ */
+fieldset 
+{
+    background:  #dfdfdf;
+    border:  1px solid #ccc;
+    margin:  2em 0;
+    padding:  1em;
+	border-radius: 5px;
+	box-shadow: 15px 10px 5px gray;
+}
+
+legend 
+{
+    font-size:  1.2em;
+    font-weight:  bold;
+    position:  relative;
+    top:  -.4em;
+}
+
+/* style for sub-fieldset */
+fieldset fieldset 
+{
+    background:  #efefef;
+    margin:  1em 0;
+}
+
+fieldset fieldset legend 
+{
+    font-size:  1em;
+}
+
+form 
+{
+	width: 90%;
+	margin: auto;
+}
+/* @todo make them center-aligned inside the div 
+may be we have to use padding with some precise calculation */
+#form_buttons 
+{
+	text-align: center;	
+}
+#form_buttons input 
+{
+	width: 10em;
+	border-radius: 5px;
+	margin-right: 0.5em;
+	padding: 0.5em;
+	display:inline;
+	float:none;
+	box-shadow: 10px 5px 3px gray;
+}
+
+input[type=checkbox], input[type=radio]
+{
+	margin-top: 0.3em;
+	margin-right: 0.3em;
+}
+
+/*Styles for table*/
+table
+{
+	margin-left: 30px;
+	border-collapse: collapse; /* separate*/
+	border-spacing: 0;	/* 5px */	
+	width: 90%;
+	box-shadow: 15px 10px 5px gray;
+}
+
+table
+{
+	height: 30px;	
+	background:#e5f1f4;
+}
+
+table th 
+{
+	background: #328aa4 url(../img/tr_back.gif) repeat-x;
+	color:#fff;
+	/*width: 10em;*/
+	text-align:left;
+}
+
+table th, table td 
+{
+	border: 1px solid #fff;
+	padding: 5px;
+}
+table#contact_info {width: 900px;}
+#google_map 
+{
+	box-shadow: 15px 10px 5px gray;
+	width:720px; /* 16x45 */
+	height:405px; /* 9x45 */
+	margin: 0px auto;
+	background:gray url('../img/google-map-cached.png');
+	width: 900px;height:495px;margin:20px 30px;
+}
+
+#link-terms:
+{
+	
+}
+
+#link-terms:hover
+{
+	color:white;
+}
+
+#slideshow img
+{
+	margin-top: -10px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+#slideshow img.thumbnail
+{
+	box-shadow: none;
+}
+
+
+/*#slideshow img 
+{
+    -webkit-animation: fadeing 7s; 
+       -moz-animation: fadeing 7s; 
+        -ms-animation: fadeing 7s; 
+         -o-animation: fadeing 7s; 
+            animation: fadeing 7s;
+}*/
+
+/*
+ nửa thời gian đầu vẫn hiện (0 -> 50%)
+ nửa thời gian sau mờ dần (độ chắn sáng giảm xuống 0)
+ Tham khảo:
+ http://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load
+ https://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+ http://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_fading
+ */
+@keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+/* Firefox < 16 */
+@-moz-keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+/* Internet Explorer */
+@-ms-keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+
+.product-info
+{
+	padding-right: 15px;	
+}
+.product-info p
+{
+	width:500px;
+	float:left;	
+}
+
+.product-info img
+{
+	width:235px;
+	display:block;
+	float:right;	
+}

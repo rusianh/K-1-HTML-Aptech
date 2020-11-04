@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservation</title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+
+    <style>
+        form {
+            width: 50%;
+            margin: auto;
+        }
+
+        label {
+            width: 14em;
+        }
+
+        input[type="submit"] {
+            background: url("images/Submit.jpg") no-repeat;
+        }
+
+            input[type="submit"]:hover {
+                background: url("images/Submitdown.jpg") no-repeat;
+            }
+
+        input[type="reset"] {
+            background: url("images/Clearform.jpg") no-repeat;
+        }
+
+            input[type="reset"]:hover {
+                background: url("images/Clearformdown.jpg") no-repeat;
+            }
+    </style>
+</head>
+<body>
+    <aside>
+        <hr />
+        <h2>Main Menu</h2>
+        <hr />
+        <a id="link_home" href="home.html">&nbsp;</a>
+        <br />
+        <a id="link_reservation" href="reservation.html">&nbsp;</a>
+        <br />
+        <a id="link_contact" href="contact.html">&nbsp;</a>
+    </aside>
+
+    <section>
+        <hr />
+        <h2>Hotel Reservation Form</h2>
+        <hr />
+        <form>
+
+
+            <fieldset style="border:none;">
+
+                <label>Name:</label>
+                <input type="text" required />
+
+                <label>Select City:</label>
+                <select required title="Vui lòng chọn một tỉnh thành !">
+                    <option value="" selected>---Select---</option>
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                    <option value="Đà Nẵng">Đà Nẵng</option>
+                </select>
+
+                <label>Arrival Date (MM/dd/yyyy):</label>
+                <input type="date" name="arrival_date" required />
+
+                <label>Departure Date (MM/dd/yyyy):</label>
+                <input type="date" name="departure_date" required pattern="(0[1-9]|[12][0-9]|3[01])[-/.](0[1-9]|1[012])[- /.](19|20)\d\d" title="Ngày tháng phải hợp lệ! (dd/MM/yyyy hoặc dd-MM-yyyy hoặc dd.MM.yyyy)" placeholder="30/04/1975" />
+
+                <label>Number of Rooms:</label>
+                <input type="number" name="number_of_rooms" required />
+                <label>Number of Persons:</label>
+                <input type="number" name="number_of_persons" required />
+            </fieldset>
+
+            <label>&nbsp;</label>
+            <input type="submit" value="" class="bg_button" />
+            <input type="reset" value="" class="bg_button" />
+            <!--<button class="back bg_button" onclick="window.history.back();">&nbsp;</button>-->
+            <button class="back bg_button">&nbsp;</button>
+
+            <br class="clear_both" />
+
+        </form>
+
+    </section>
+
+    <script type="text/javascript">
+
+        document.querySelector(".back").onclick = function (e) {
+            window.history.back();
+        };
+
+        document.querySelector('form').onsubmit = function (e)
+        {
+            e.preventDefault();
+            
+
+            if(this.arrival_date.valueAsDate > this.departure_date.valueAsDate)
+            {
+                // Ngày đến không được phép muộn hơn ngày đi
+                alert("Error-Arrival date cannot be later than departure date !!!");
+                this.departure_date.style.boxShadow = '0 0 5px red';
+                return;
+            }else {
+                this.departure_date.style.boxShadow = 'none';
+            }
+
+            if(this.number_of_persons.value < this.number_of_rooms.value)
+            {
+                // Tổng số người phải lớn hơn hoặc bằng tổng số phòng
+                alert("Error-Number of persons must be equal or greater than number of rooms");
+                this.number_of_persons.style.boxShadow = '0 0 5px red';
+                return;
+            }else{
+                this.number_of_persons.style.boxShadow = 'none';
+            }
+
+            alert("Reservation is successful ! Thank you !");
+
+            // this.submit();
+        };
+
+    </script>
+</body>
+</html>

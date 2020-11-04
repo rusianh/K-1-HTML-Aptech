@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Live Show</title>
+<!--
+@see http://stackoverflow.com/questions/339923/set-cellpadding-and-cellspacing-in-css
+ 
+Các bước tạo bảng:  
+1. Create table using DW Panel Insert.
+	- Rows: 3; Cols: 3
+	- Table Width:200px
+	- Border Thickness: 3px
+	- Cell Padding: 5px;
+	- Cell Spacing: 5px;
+	- Header: Top
+	- Caption: Danh Mục Mua Sắm Thiết Bị Di Động 2014
+2. Fill data for table head, table cell
+3. Perform cell merge (row span, col span)
+	- Way 1: Right Click > Table > Merge Cells (Ctrl+Alt+M)
+	- Way 2: Right Click > Table > Increse Row/Column Span
+4. Create class for <td> with style of width, text-align
+	.company_name
+	.model_name
+	.price
+5. Create seperate style for <th> and <td>
+	th {background: #328aa4; color: #fff}
+the text color of the head should be contrast to the background color
+6. Give background image to th by editing background css
+7. Give css for <td> seperately	
+	td {height: 30px;	background:#e5f1f4;}
+8. Give border style for compound css rule th,td
+	th,td {border: 1px solid #fff;}
+	
+11. Validating the site to see the obselete attributes:
+	- cellpading
+	- cellspacing
+	11.1 We replace table's cellpading by padding style for td,th.
+	11.2 Demo table {border-collapse: separate;border-spacing: 5px;}
+	11.3 Demo table {border-collapse: collapse;border-spacing: 0;}
+12. Make table center-aligned
+	{margin: 0 auto}
+13. Play around with td.company_name {vertical-align: top;}
+14. Comment th > background color and increase th's height to see
+the reason why we need background-color the same as background image color.	
+-->
+<style>
+body {
+	background-color: white;
+}
+
+table {
+	margin: 30px auto;
+	
+	border-collapse: collapse; /* separate*/
+	border-spacing: 0;	/* 5px */	
+}
+
+/* It works ! */
+/*
+tr {text-align: center;}
+*/
+
+/* 
+But we need text-alignment for each cell ! 
+	vertical-align: top;
+	height:30px;
+	<table border="1" cellpadding="0">
+is the only way to demo vertical-align. You should not use
+cellpading="10px" when demo vertical alignment
+HTMl 5 does not use valign.
+*/
+
+td.company_name {
+	text-align: left;
+	width: 120px;
+	/* vertical-align: top; */
+}
+
+td.model_name {
+	text-align: center;
+	width: 150px;
+	/* vertical-align: middle; */
+}
+
+td.price {
+	text-align: right;
+	width: 100px;
+	/* vertical-align: bottom; */
+}
+
+td {
+	height: 30px;	
+	background:#e5f1f4;
+}
+
+th {
+	background: #328aa4 url(HTML_Assign.05.02.Table.gif) repeat-x;
+	color:#fff;
+}
+
+th, td {
+		border: 1px solid #fff;
+		padding: 3px;
+}
+</style>
+</head>
+<body>
+<!-- 
+	Demo border style for each table cell (@see css)
+-->
+	<table>
+   	  <caption>Bảng Mua Sắm Thiết Bị Di Động 2012</caption>
+		<thead>
+			<tr>
+				<th>Nhà Sản Xuất</th><th>Mẫu</th><th>Giá thành</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="company_name" rowspan="3">Apple</td>
+                <td class="model_name">iPhone</td>
+                <td class="price">399 $</td>
+			</tr>
+			<tr>
+                <td class="model_name">iPad</td>
+                <td class="price">699 $</td>
+			</tr>
+			<tr>
+                <td class="model_name">iMac</td>
+                <td class="price">1099 $</td>
+			</tr>
+			<tr>
+				<td class="company_name" rowspan="3">Samsung</td>
+                <td class="model_name">Galaxy Note</td>
+                <td class="price">355 $</td>
+			</tr>
+			<tr>
+
+                <td class="model_name">Galaxy Tab</td>
+                <td class="price">655 $</td>
+			</tr>
+			<tr>
+
+                <td class="model_name">ATIV Book</td>
+                <td class="price">1055 $</td>
+			</tr>
+			<tr>
+				<td class="company_name" rowspan="3">Sony</td>
+                <td class="model_name">Xperia Z Phone</td>
+                <td class="price">319 $</td>
+			</tr>
+			<tr>
+                <td class="model_name">Xperia Z Tablet</td>
+                <td class="price">619 $</td>
+			</tr>
+			<tr>
+                <td class="model_name">Sony Vaio</td>
+                <td class="price">1019 $</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3" style="text-align:right">Tổng: 6219$</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

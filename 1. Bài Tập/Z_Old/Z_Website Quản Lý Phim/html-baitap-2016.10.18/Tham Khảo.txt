@@ -1,0 +1,34 @@
+Why width 960px?
+http://stackoverflow.com/questions/7415758/why-width-960px
+
+
+
+1024px is the max screen width it's aiming at. We need to allow some window chrome, so it needs to be less. We'd ideally like it to have lots of factors, allowing us to split it into equal size columns with integer widths.
+
+960 has lots of factors:
+
+echo factors(960);
+1  2  3  4  5  6  8  10  12  15  16  20  24  30  32  40  48  60  64  80  96  120  160  192  240  320  480  960 
+
+1000 doesn't have as many
+
+echo factors(1000);
+1  2  4  5  8  10  20  25  40  50  100  125  200  250  500  1000  
+
+Specifically, you can easily split 960 into 2,3,4,5,6 and 8 columns.
+-------------------------------------------------------------------------
+ 25
+down vote
+	
+Why 960px is suggested for the website layout?
+
+960 pixels is a common width for web layouts because 1024 x 768 was the most common resolution for many years and designers were forced to design for the lowest common denominator. When designing to a fixed width, it's wise to design so most people don't see a horizontal scrollbar. If your design is 1024 pixels wide, a page that is higher than the viewport (say 768 pixels for simplicity), will suddenly introduce a vertical scrollbar, eating away the available horizontal space which suddenly is less than 1024 pixels (1024 minus the width of the vertical scrollbar).
+
+So you need a width less than 1024 minus the width of the vertical scrollbar. The width of a scrollbar isn't much more than 20 pixels, but to take into account non-maximized windows and end up with a number that's easily divisible into as many factors as possible, since that makes designing fixed-size boxes or columns easier. As 960 has more factors than 1000, 960 was chosen.
+
+It's a partially false safety net to base the design on a fixed width of 960 pixels, though, since many people won't maximize their windows or even re-size them properly, so even with resolutions higher than 1024, their browser window might not fit 960 pixels. That's why responsive web design is beginning to take off, where designs are more fluid and responsive to the user's device settings (like screen resolution).
+What exactly is Grid system?
+
+A grid system is just a set of predefined CSS class names that you can use in your HTML documents to align the different boxes in your design into a "grid" that matches one or more common layouts for web design. A grid system is good if you're unfamiliar with CSS and find it difficult to align the boxes (in both width and height) your design is composed of.
+
+If you find CSS simple enough to write yourself, I recommend you write it yourself. I also recommend not to use strictly fixed width columns, but instead more responsive web design (like mentioned above) to accommodate different screen sizes better than a fixed-width design is capable of.

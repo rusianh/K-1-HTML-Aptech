@@ -1,0 +1,44 @@
+label, input, select, span, textarea 
+{
+	display: block;
+	float: left;
+}
+
+label 
+{
+	clear: left;
+	width: 150px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+input, select, textarea
+{
+    margin:  0 0 10px 0;	
+}
+
+.clear_float 
+{
+	clear: both;
+}
+
+fieldset 
+{
+    background: lightgray;
+    border:  1px solid darkgray;
+    margin:  30px 0;
+    padding:  15px;
+	border-radius: 5px;
+}
+
+legend 
+{
+    font-size:  20px;
+    font-weight:  bold;
+}
+
+form 
+{
+	width: 60%;
+	margin: auto;
+}

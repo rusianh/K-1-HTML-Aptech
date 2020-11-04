@@ -1,0 +1,7 @@
+Template: 5
+Home:     1.5
+Gallery:  4.5
+Order:    7
+Contact:  2
+--------------
+total:    20

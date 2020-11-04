@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+<meta charset="utf-8" />
+<style>
+    label, input, span, textarea 
+    {
+	    display: block;
+	    float: left;
+    }
+
+    label 
+    {
+	    clear: left;
+	    width: 150px;
+	    text-align: right;
+	    margin-right: 10px;
+    }
+
+    input
+    {
+        margin:  0 0 10px 0;	
+    }
+
+    .clear_float 
+    {
+	    clear: both;
+    }
+
+    fieldset 
+    {
+        background: lightgray;
+        border:  1px solid darkgray;
+        margin:  30px 0;
+        padding:  15px;
+    }
+
+    legend 
+    {
+        font-size:  20px;
+        font-weight:  bold;
+    }
+
+    form 
+    {
+	    width: 60%;
+	    margin: auto;
+    }
+</style>    
+</head>
+<body>
+<form id="form" action="home.html" method=post>
+    <h1 style="text-align:center">Student Registration Form</h1>
+    <fieldset>
+        <legend>Form</legend>
+    
+        <label>FIRST NAME</label>
+        <input type="text" name="firstname" required pattern="[a-zA-Z]{3,30}" title="Tên chỉ chứa chữ cái. Độ dài từ 3-30 kí tự."/>
+        <span>(max 30 characters a-z and A-Z)</span>
+
+        <label>LAST NAME</label>
+        <input type="text" name="lastname" required pattern="[a-zA-Z]{2,30}" title="Họ chỉ chứa chữ cái. Độ dài từ 2-30 kí tự."/>
+        <span>(max 30 characters a-z and A-Z)</span>
+
+        <label>DATE OF BIRTH</label>
+        <input type="date" name="dob" required min="1980-01-01" max="2000-12-30" title="Ngày tháng không được để trống."/>
+
+        <label>EMAIL</label>
+        <input type="email" name="email" required pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" title="Email phải hợp lệ." placeholder="you@where.com"/>
+
+        <label>MOBILE NUMBER</label>
+        <input name="mobile" type="text" required pattern="^[0-9]{10}$"/>
+        <span>(10 digit number)</span>
+
+        <label>GENDER</label>
+        <span>Male</span>
+        <input name="gender" type="radio" checked/>
+        <span>Female</span>
+        <input name="gender" type="radio"/>
+
+        <label>ADDRESS</label>
+        <textarea cols="30" rows="5" name="address"></textarea>
+    </fieldset>
+
+    <input type="submit" value="Submit"/>
+    <input type="reset" value="Reset"/>
+</form>
+</body>
+</html>

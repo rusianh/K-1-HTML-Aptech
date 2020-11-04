@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Template Microsoft</title>
+<link href="../baitap/microsoft/images/favicon-windows.png" rel="icon" />
+
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="../assets/css/oneColFixCtrHdr.css" rel="stylesheet" type="text/css">
+<link href="../SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../lib/font-awesome/4.6.3/css/font-awesome.css">
+<script src="../SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="../assets/js/jquery.js"></script>
+<script src="../assets/js/shared.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+<script src="../baitap/microsoft/Templates/assets/js/google-map.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <div class="header">
+  <!--<a href="#" style="display:block;float:left;"><img src="../images/logo-movies-oscar-200x200.jpg" alt="Insert Logo Here" name="Insert_logo" width="200" height="200" id="Insert_logo" style="background-color: #C6D580; display:block;" /></a>
+  <img src="../images/banner-movies-hollywoods.jpg" width="760" height="150" style="display:block; float:right;"/> -->
+  <ul id="MenuBar1" class="MenuBarHorizontal">
+<li><a href="../baitap/microsoft/index.html"><i class="fa fa-windows"></i>&nbsp;Home</a></li>
+    <li><a href="../baitap/microsoft/gallery.html"><i class="fa fa-image"></i>&nbsp;Gallery</a>      </li>
+    <li><a href="../baitap/microsoft/order.html"><i class="fa fa-shopping-cart"></i>&nbsp;Order</a></li>
+    <li><a href="../baitap/microsoft/gallery.html#phone"><i class="fa fa-mobile"></i>&nbsp;Phone</a></li>
+    <li><a href="../baitap/microsoft/gallery.html#tablet"><i class="fa fa-tablet"></i>&nbsp;Tablet</a></li>
+    <li><a href="../baitap/microsoft/gallery.html#laptop"><i class="fa fa-desktop"></i>&nbsp;Laptop</a></li>
+  </ul>
+  <input type="text" class="search_box" placeholder="Search..."/>
+  <br class="clearfloat">
+    <!-- end .header --></div>
+  <div class="content"><!-- TemplateBeginEditable name="Main Content" -->Main Content<!-- TemplateEndEditable -->
+    
+    <!-- end .content --></div>
+  <div class="footer">
+    <p>Copyright &copy;2016. Microsoft Corp. All Rights Reserved. &lt;<a href="mailto:billgates@microsoft.com">billgates@microsoft.com</a>&gt;</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"../SpryAssets/SpryMenuBarDownHover.gif", imgRight:"../SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+<a href="#" class="scrollToTop" title="Scroll To Top" style="text-decoration:none;"><i class="fa fa-windows"></i></a>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register v3</title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+        /* Bổ sung thêm mã css trong trang để căn chỉnh form
+            ra chính giữa thẻ cha
+        */
+        form 
+        {
+            height: 50%;
+            position: absolute;
+            top:0;right:0;bottom:0;left:0;
+        }
+    </style>
+</head>
+<body>
+    <form action="home.html">
+        <h1>User Registration</h1>
+
+        <fieldset>
+
+            <label>User ID:</label>
+            <input type="text" required pattern="[a-zA-Z][a-zA-Z0-9]{5,}" title="Tối thiểu 5 kí tự!, phải bắt đầu với một chữ, còn lại là chữ hoặc số !."/>
+
+            <label>Password:</label>
+            <input type="password" name="pass" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Tối thiểu 8 kí tự, có ít nhất là 1 chữ và 1 số"/>
+
+            <label>Confirm Password:</label>
+            <input type="password" name="pass_confirm" required/>
+
+            <label>Existing E-mail ID:</label>
+            <input type="email" name="email" required />
+
+            <label>Existing E-mail ID:</label>
+            <input type="email" name="email_confirm" required/>
+
+            <label>&nbsp;</label>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+
+            <br class="clear_both" />
+        </fieldset>
+    </form>
+
+    <script type="text/javascript">
+
+        document.querySelector('form').onsubmit = function (e) {
+            e.preventDefault();
+
+            if (this.pass.value != this.pass_confirm.value)
+            {
+                alert("Error-Password Confirm not match !");
+                this.pass_confirm.style.boxShadow = '0 0 5px red';
+                return;
+            }else {
+                this.pass_confirm.style.boxShadow = 'none';
+            }
+
+            if (this.email.value != this.email_confirm.value)
+            {
+                alert("Error-Email Confirm not match !");
+                this.email_confirm.style.boxShadow = '0 0 5px red';
+                return;
+            }else{
+                this.email_confirm.style.boxShadow = 'none';
+            }
+
+            this.submit();
+        };
+    </script>
+
+</body>
+</html>

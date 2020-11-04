@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home 20.10.26 09h44</title>
+<meta charset="utf-8" />
+<style>
+/* Quản Lý Bố Cục Tài Liệu */
+	body    { margin: 0; padding: 0 5%;}
+
+    /* chống sập cho phần đầu tài liệu */
+    header nav  { clear: both; }
+
+    main  { float: left; width: 80%; padding: 1%; min-height: 500px; background: lightgray }
+    aside { float: left; width: 16%; padding: 1%; min-height: 500px; background: darkgray  }
+    
+    /* Tổng độ rộng của section, aside là 80+16=96%, còn lại 4% dành cho padding lề trong của section và aside */
+
+    /* chống sập cho phần chân tài liệu */
+	footer  { clear: both; }
+
+/* Quản Lý Chi Tiết Các Khu Vực */
+    body 
+    {
+        background: url('background.jpg') repeat-x; 
+        background-size: cover;
+    }
+
+    header h1, header h2
+    {
+        color: white;
+        font-family: Arial;
+        text-align:center;
+    }
+
+    header h1
+    {
+
+        font-size: 300%;
+
+    }
+
+    header h2
+    {
+
+        font-size:170%;
+    }
+
+            /* ĐIỀU HƯỚNG */
+        nav 
+        {
+            background: url('bar.jpg') repeat-x;
+            background-size: cover;
+            height:20px;    /* độ cao 70 trừ đi padding */
+            text-align:center;
+            color: white;
+            padding: 25px 0; /* lề trong top và bottom bị can thiệp */
+        }
+
+        nav a
+        {
+            color:white;
+            font-size:14px;
+            text-decoration:none;
+            padding:0 25px;
+        }
+
+        nav a:hover
+        {
+/*             text-decoration:underline; */
+            text-decoration:none;
+            border-bottom: solid 3px orange;
+        }
+
+            /* ẢNH QUẢNG CÁO */
+        div 
+        {
+            padding: 0.5%;
+            background: white;
+        }
+        div img
+        {
+            width:100%;
+        }
+
+            
+        /* Nội Dung Phụ */
+
+        aside h3, aside p
+        {
+            color:#fbf5f5;
+        }
+
+        main h2, aside h2
+        {
+            color:blue;
+        }
+
+            /* CHÂN TÀI LIỆU */
+        footer
+        {
+            background: url(bar.jpg) repeat-x;
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+        footer a {
+            color: white;
+        }
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Grey Junction</h1>
+        <h2>Company Slogan Goes Here</h2>
+        <nav>
+            <a href="#">Home</a> | 
+            <a href="#">Our Work</a> | 
+            <a href="#">Testimonials</a> |
+            <a href="#">Projects</a> |
+            <a href="contact.html">Contact Us</a> 
+        </nav>
+    </header>
+
+    <div>
+        <img src="adv.jpg" /> 
+    </div>
+
+    <main>
+        <h2>Welcome To Your Website</h2>
+        <p>
+           This standards compliant, simple, fixed width website template is released as an 'open source' design (under the Creative Commons Attribution 3.0 Licence),
+           which means that you are free to download and use it for anything you want (including modifying and amending it). If you would like to remove the 'website
+           template by ARaynorDesign' link from the footer of a template / website then that is OK, providing you make a small donation via the website. I do not specify
+           an amount, just what you think the design is worth.
+        </p>
+        <p>
+           This standards compliant, simple, fixed width website template is released as an 'open source' design (under the Creative Commons Attribution 3.0 Licence),
+           which means that you are free to download and use it for anything you want (including modifying and amending it). If you would like to remove the 'website
+           template by ARaynorDesign' link from the footer of a template / website then that is OK, providing you make a small donation via the website. I do not specify
+           an amount, just what you think the design is worth.
+        </p>
+    </main>
+
+    <aside>
+        <h2>Latest Blog</h2>
+        <h3> April 2012</h3>
+        <p>           
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.
+            Read more
+            
+        </p>
+        <a href="#">Read more</a>
+
+        <h2>Latest Blog</h2>
+        <h3> April 2012</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.
+            Read more
+        </p>
+        <a href="#">Read more</a>
+    </aside>
+
+    <footer>
+        &copy; Lê Minh Họa-<a href="mailto:leminhhoa@gmail.com">leminhhoa@gmail.com</a>
+    </footer>
+</body>
+</html>

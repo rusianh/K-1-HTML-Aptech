@@ -1,0 +1,88 @@
+<html>
+<head>
+<style>
+	fieldset
+{
+border: 1px solid #781351;
+width: 20em;
+height:5em;
+}
+
+legend
+{
+color: #fff;
+background: #ffa20c;
+border: 1px solid #781351;
+padding: 2px 6px
+} 
+	span {
+	
+	position:absolute;
+	display:   none;
+	top:200px;
+	left:200px;
+	border-style:dashed;
+	border-color:#CC0033;
+	border-width:5px;
+	width:400px;
+	height:100px;
+	color:#330099;
+	font-size:16pt;
+	text-align:center;
+	}
+</style>
+</head>
+</html>
+<span id="span1"></span>
+<center>
+<form action="#">
+<fieldset>
+<legend>Hay chon User</legend>
+<select name="s1" onChange="show();" style="width:300px;">
+	<option>Please Select User</option>
+		<option></option>
+		<option></option>
+		<option></option>
+</select>
+</fieldset>
+</form> 
+</center>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+var x=window.prompt("Nhap ten nguoi 1:","name");
+var y=window.prompt("Nhap ten nguoi 2:","name");
+var z=window.prompt("Nhap ten nguoi 3:","name");
+document.forms[0].s1.options[1].value=x;
+document.forms[0].s1.options[2].value=y;
+document.forms[0].s1.options[3].value=z;
+document.forms[0].s1.options[1].innerText=x;
+document.forms[0].s1.options[2].innerText=y;
+document.forms[0].s1.options[3].innerText=z;
+
+function show()
+{
+var y=document.forms[0].s1.selectedIndex;
+var x=document.forms[0].s1.options[y].value;
+//alert(x);
+switch(y)
+{
+case 1:document.all.span1.innerText="Ban da chon user so 1 la: "+x;
+		document.all.span1.style.display="block";
+		break;
+case 2: document.all.span1.innerText="Ban da chon user so 2 la: "+x;
+	document.all.span1.style.display="block";
+		break;
+case 3:document.all.span1.innerText="Ban da chon user so 3 la: "+x;
+	document.all.span1.style.display="block";
+		break;
+default:document.all.span1.style.display="none";
+		break;
+
+}
+
+}
+</script>
+
+

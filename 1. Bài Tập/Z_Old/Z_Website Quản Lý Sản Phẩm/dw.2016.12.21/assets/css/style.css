@@ -1,0 +1,297 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Foating Management */
+.float_left
+{
+	float: left;	
+}
+.float_right
+{
+	float: right;	
+}
+.clear_float 
+{
+	clear: both;
+	height: 0px;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+/* Override Horizontal Menu Bar's Style */
+/* 
+ Viết đề phong cách của Spry Menu Bar.
+ Khi chuột di ra ngoài thì link có màu xanh lá cây đậm,
+ khi chuột di vào thì link có màu xanh lá cây nhạt.
+ */
+
+ul.MenuBarHorizontal li
+{
+	width: 7em;
+}
+ul.MenuBarHorizontal a
+{
+	background-color: #ADB96E;
+}
+ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
+{
+	background-color: #C6D580;
+	color: #FFF;
+}
+
+
+/* 
+ Gray Colors: #ccc; #bcbcbc; #757575; #999; whiteSmoke;
+ */
+/* 
+ Hộp Tìm Kiếm 
+ Bảng Màu Xám: #ccc; #bcbcbc; #757575; #999; whiteSmoke;
+ */
+.search_box
+{
+	display: block;
+	float: right;
+	margin: 8px; 
+	
+	border-radius: 15px;
+	border: none;
+    border-bottom:1px solid #ccc;
+	background: white url('../img/search.png') no-repeat;
+	background-size: 35px 35px;
+	
+	font-size: 18px;
+	color: #999; 
+	padding:6px 15px 6px 30px; /* căn lề trong bên phải padding-right = đường kính bo tròn border-radius */
+	
+	width: 160px;
+	transition: width 2s;
+	
+}
+.search_box:focus
+{
+	width: 225px;	
+	outline: none; /* gỡ bỏ đường viền khi test trên Chrome */
+}
+
+
+.scrollToTop
+{
+	width:40px; 
+	height:40px;
+	text-align:center; 
+	
+	background: #ccc;
+	font-weight: bold;
+	font-size: 20px;
+	padding-top: 3px;
+	border-radius: 50%;
+	
+	position:fixed;
+	bottom:40px;
+	right:100px;
+	display:none;
+}
+.scrollToTop:hover
+{
+	text-decoration:none;
+	background:white;
+}
+
+/* 
+ Form 
+ */
+form 
+{
+	width: 90%;
+	margin: auto;
+}
+
+fieldset 
+{
+    background:  #dfdfdf;
+    border:  1px solid #ccc;
+    margin:  2em 0;
+    padding:  1em;
+	border-radius: 5px;
+	box-shadow: 15px 10px 5px gray;
+}
+
+fieldset fieldset 
+{
+    background:  #efefef;
+    margin:  1em 0;
+}
+
+legend 
+{
+    font-size:  1.2em;
+    font-weight:  bold;
+    position:  relative;
+    top:  -.4em;
+}
+
+fieldset fieldset legend 
+{
+    font-size:  1em;
+}
+
+label, input ,select, progress, meter
+{
+	display: block;
+	float: left;
+}
+
+label 
+{
+	clear: left;
+	width: 11em;
+	text-align: right;
+	margin-right: 0.5em;
+}
+
+input, select
+{
+    margin:  0 0 .5em 0;	/* top right bottom left */
+}
+input[type=checkbox], input[type=radio]
+{
+	margin-top: 0.3em;
+	margin-right: 0.3em;
+}
+
+.form_buttons 
+{
+	text-align: center;	
+}
+.form_buttons input 
+{
+	width: 10em;
+	border-radius: 5px;
+	margin-right: 0.5em;
+	padding: 0.5em;
+	display:inline;
+	float:none;
+	box-shadow: 10px 5px 3px gray;
+}
+
+.terms_link
+{
+	
+}
+
+.terms_link:hover
+{
+	color:white;
+}
+.terms_text
+{
+	
+}
+
+
+/* Table */
+table
+{
+	margin: 20px auto;
+	border-collapse: collapse; /* separate*/
+	border-spacing: 0;	/* 5px */	
+	width: 90%;
+	box-shadow: 15px 10px 5px gray;
+}
+
+table
+{
+	height: 30px;	
+	background:#e5f1f4;
+}
+
+table th 
+{
+	background: #328aa4 url(../img/tr_back.gif) repeat-x;
+	color:#fff;
+	width: 12em;
+	text-align:left;
+}
+
+table th, table td 
+{
+	border: 1px solid #fff;
+	padding: 5px;
+}
+table
+{
+	width:900px; 	
+}
+
+.google_map 
+{
+	box-shadow: 15px 10px 5px gray;
+	width:900px; /* 16*/
+	height:495px; /* 9 */
+	margin: 25px auto;
+	background:gray url('../img/google-map-cached.png');
+}
+
+.slideshow
+{
+	text-align:center;
+	margin-top: -10px;	
+}
+
+.slideshow img
+{
+	box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+.slideshow img.thumbnail
+{
+	box-shadow: none;
+}
+
+@keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+/* Firefox < 16 */
+@-moz-keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+/* Internet Explorer */
+@-ms-keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout 
+{
+ 	0% { opacity: 1; }
+	50% { opacity: 1; } 
+    100%   { opacity: 0; } 
+}
+
+section p
+{
+	width:600px;
+	float:left;	
+}
+
+section img
+{
+	width:330px;
+	display:block;
+	float:right;	
+}

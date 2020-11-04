@@ -1,0 +1,160 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/Template-Apple.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Order</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../../assets/css/oneColFixCtrHdr.css" rel="stylesheet" type="text/css">
+<link href="../../SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../lib/font-awesome/4.6.3/css/font-awesome.css">
+<script src="../../SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/shared.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+<script src="../../assets/js/google-map.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <div class="header">
+  <!--<a href="#" style="display:block;float:left;"><img src="../images/logo-movies-oscar-200x200.jpg" alt="Insert Logo Here" name="Insert_logo" width="200" height="200" id="Insert_logo" style="background-color: #C6D580; display:block;" /></a>
+  <img src="../images/banner-movies-hollywoods.jpg" width="760" height="150" style="display:block; float:right;"/> -->
+  <ul id="MenuBar1" class="MenuBarHorizontal">
+<li><a href="index.html"><i class="fa fa-apple"></i>&nbsp;Home</a></li>
+    <li><a href="gallery.html"><i class="fa fa-image"></i>&nbsp;Gallery</a>      </li>
+    <li><a href="order.html"><i class="fa fa-shopping-cart"></i>&nbsp;Order</a></li>
+    <li><a href="gallery.html#phone"><i class="fa fa-mobile"></i>&nbsp;iPhone</a></li>
+    <li><a href="gallery.html#tablet"><i class="fa fa-tablet"></i>&nbsp;iPad</a></li>
+    <li><a href="gallery.html#laptop"><i class="fa fa-desktop"></i>&nbsp;iMac</a></li>
+  </ul>
+  <input type="text" class="search_box" placeholder="Search..."/>
+  <br class="clearfloat">
+    <!-- end .header --></div>
+  <div class="content"><!-- InstanceBeginEditable name="Main Content" -->
+  <h2>Order Details</h2>
+  <form action="contact.html" method="post" enctype="multipart/form-data">
+	
+	<fieldset id="fs_contact">
+		<legend>Customer Information</legend>
+        <label>Title:</label>
+		<select name="personal_title">
+			<option>Mr</option>
+            <option>Mrs</option>
+            <option>Miss</option>
+            <option>Sir</option>
+            <option>Madam</option>
+		</select>
+		
+		<label>Fullname:</label>
+		<input type="text" name="fullname" required placeholder="Nguyen Tu Quang"/>
+        
+        <label>Address:</label>
+		<input type="text" name="address" style="width: 22em;" required maxlength="150"/>
+		
+		<label>Phone:</label>
+		<input type="tel" name="mobile" id="mobile" required title="Phone number must have 10 digits!" pattern="^[0-9]{10}$" placeholder="0968999888"/>
+		
+		<label>Email:</label>
+		<input type="email" name="email" id="email" required title="Email must be valid!" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" placeholder="quang@bkav.com"/>
+		
+		<br class="clearfloat">
+	</fieldset>
+    
+    <fieldset id="fs_contact">
+		<legend>Product</legend>
+        <label>Name:</label>
+		<select name="product_name">
+			<option>Mac</option>
+            <option>iPad</option>
+            <option>iPhone</option>
+            <option>iPod</option>
+            <option>Watch</option>
+            <option>TV</option>
+            <option>Beats Headphone</option>
+            
+		</select>
+		
+        <label>Color:</label>
+        <input type="color"/>
+        
+		<label>Quantity:</label>
+		<input type="number" name="quantity" id="quantity" required min="1" max="10" />
+		
+		<br class="clearfloat">
+	</fieldset>
+	
+	<fieldset id="fs_payment">
+		<legend>Payment Details</legend>
+		
+		<fieldset id="fs_creditcard">
+			<legend>Credit Card</legend>
+			
+				<label>Visa</label>
+            	<input type="radio" name="card" value="Visa" required/>
+            	
+            	<label>Mastercard</label>
+            	<input type="radio" name="card" value="Mastercard"/>
+            	
+            	<label>Discover</label>
+            	<input type="radio" name="card" value="Discover"/>
+                
+                <label>American Express</label>
+            	<input type="radio" name="card" value="American Express"/>
+			<br class="clearfloat">
+		</fieldset>
+		
+		<label>Card Number:</label>
+		<input type="number" name="card_number" required pattern="^[0-9]$" />
+		<label>Expiration Date:</label><!-- tham khảo: http://html5pattern.com/Dates -->
+		<input type="date" name="card_expiration_date" required title="Date time must be valid! (dd/mm/yyyy or dd-mm-yyyy or dd.mm.yyyy)" pattern="(0[1-9]|[12][0-9]|3[01])[-/.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="15/09/2020"/>
+        
+        <label>&nbsp;</label>
+        <input type="checkbox" name="terms_of_use" id="terms_of_use" checked required/>
+        <label style="clear:none;width: 23em;text-align:left;">I accept the terms and conditions.<a href="#terms_text" class="terms_link" style="text-decoration:none;">[Show &darr;]</a></label>
+        <textarea class="terms_text" style="clear:both;display:none;" cols="105" rows="20" readonly>
+        These terms and conditions create a contract between you and Apple (the “Agreement”). Please read the Agreement carefully. To confirm your understanding and acceptance of the Agreement, click “Agree.”
+
+A. INTRODUCTION TO OUR SERVICES
+
+This Agreement governs your use of Apple’s services (“Services”), through which you can buy, get, license, rent or subscribe to media, apps (“Apps”), and other in-app services (“Content”). Our Services are: iTunes Store, App Store, iBooks Store, Apple Music, and Apple News. Our Services are available for your use in your country of residence (“Home Country”). To use our Services, you need compatible hardware, software (latest version recommended and sometimes required) and Internet access (fees may apply). Our Services’ performance may be affected by these factors.
+
+B. USING OUR SERVICES
+
+PAYMENTS, TAXES, AND REFUNDS
+
+You can acquire Content on our Services for free or for a charge, either of which is referred to as a “Transaction.” Each Transaction is an electronic contract between you and Apple, and/or you and the entity providing the Content on our Services. However, if you are a customer of iTunes S.à.r.l. and you acquire an App or a book, iTunes S.à.r.l. is the merchant of record; this means that you acquire the Content from iTunes S.à.r.l., and it is licensed by the App Provider (as defined below) or book publisher. When you make your first Transaction, we will ask you to choose how frequently we should ask for your password for future Transactions. If you enable Touch ID for Transactions, we will ask you to authenticate all Transactions with your fingerprint. Manage your password settings at any time by following these instructions: https://support.apple.com/en-us/HT204030. Apple will charge your payment method (such as your credit card, debit card, gift card/code, or other method available in your Home Country) for any paid Transactions, including any applicable taxes. If you pre-order Content, you will be charged when the Content is delivered to you (unless you cancel prior to the Content’s availability). For details about how Transactions are billed, please visit http://support.apple.com/kb/HT5582. All Transactions are final. Content prices may change at any time. If technical problems prevent or unreasonably delay delivery of Content, your exclusive and sole remedy is either replacement of the Content or refund of the price paid, as determined by Apple. From time to time, Apple may refuse a refund request if we find evidence of fraud, refund abuse, or other manipulative behavior that entitles Apple to a corresponding counterclaim. Terms related to gift cards/codes are available here: http://www.apple.com/legal/internet-services/itunes/giftcards/.
+
+APPLE ID
+
+Using our Services and accessing your Content requires an Apple ID. An Apple ID is the account you use across Apple’s ecosystem. Your Apple ID is valuable, and you are responsible for maintaining its confidentiality and security. Apple is not responsible for any losses arising from the unauthorized use of your Apple ID. Please contact Apple if you suspect that your Apple ID has been compromised.
+
+You must be age 13 (or equivalent minimum age in your Home Country, as set forth in the registration process) to create an Apple ID and use our Services. Apple IDs for persons under this age can be created by a parent or legal guardian using Family Sharing or by an approved educational institution.
+        </textarea>
+		
+		<br class="clearfloat">
+	</fieldset>
+	
+	<div class="form_buttons">
+    	<input type="submit" value="Submit"/>
+        <input type="reset" value="Cancel">
+        <br class="clearfloat"/>
+    </div>
+</form>
+  <!-- InstanceEndEditable -->
+    
+    <!-- end .content --></div>
+  <div class="footer">
+    <p>Copyright &copy;2016. Apple Inc. All Rights Reserved. &lt;<a href="mailto:billgates@gmail.com">stevejobs@aple.com</a>&gt;</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"../SpryAssets/SpryMenuBarDownHover.gif", imgRight:"../SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+<a href="#" class="scrollToTop" title="Scroll To Top" style="text-decoration:none;"><i class="fa fa-apple"></i></a>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery Mobile Form</title>       
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+<link rel="stylesheet" href="HTML_Assign.04.06.FORM.jQueryMobile.css">
+<script src="jqueryMobileForm.js"></script>
+</head>
+<body>
+<!--------------first page for form----------->
+<div data-role="page">  
+    <!--------------first page header----------->
+    <div data-role="header">
+		<h1>jQuery Mobile Form</h1>
+    </div> 
+    <!--------------first page main content----------->
+    <div data-role="main" class="ui-content">  
+		<form method="post" action="#pageone" data-ajax="false">
+    
+    		<label for="name">Tên : <span>*</span></label>
+    		<input type="text" name="name" id="name" placeholder="Tên">
+    
+    		<label for="email">Email: <span>*</span></label>
+    		<input type="email" id="email" name="email" placeholder="Email"/>
+    
+    		<fieldset data-role="controlgroup">
+				<legend>Giới Tính:</legend>
+				<label for="male">Name</label>
+				<input type="radio" name="gender" id="male" value="male">
+				<label for="female">Nữ</label>
+				<input type="radio" name="gender" id="female" value="female">	
+    		</fieldset>
+    
+    		<fieldset data-role="controlgroup">
+				<legend>Trình độ:</legend>
+				<label for="graduation">Đại Học</label>
+				<input type="checkbox" id="graduation" value="graduation">
+				<label for="postgraduation">Sau Đại Học</label>
+				<input type="checkbox" id="postgraduation" value="postgraduation">
+				<label for="other">Khác</label>
+				<input type="checkbox" id="other" value="other">	
+			</fieldset>
+    
+    		<div class="ui-field-contain">
+  				<label for="flip-1">Flip switch:</label>
+				<select name="flip-1" id="flip-1" data-role="slider">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+  			</div>
+  					
+  			<div class="ui-field-contain">
+  				<label id="slider-label" for="slider">Slider</label>
+				<div class="ui-slider">
+					<input id="slider" class="ui-shadow-inset ui-body-inherit ui-corner-all ui-slider-input" type="number" data-type="range" data-highlight="true" max="100" min="0" value="0" name="slider"></input>
+					<!--
+					<div class="ui-slider-track ui-shadow-inset ui-bar-inherit ui-corner-all" role="application">
+								
+								 
+    				<div class="ui-slider-bg ui-btn-active" style="width: 19%;"></div>
+    				<a class="ui-slider-handle ui-btn ui-shadow" href="#" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="19" aria-valuetext="19" title="19" aria-labelledby="slider-label" style="left: 19%;"></a>
+								
+					</div>
+					-->
+				</div>
+  			</div>
+    
+    		<label for="info">Tin nhắn:</label>
+    		<textarea name="addinfo" id="info" placeholder="Tin nhắn"></textarea>
+
+    		<input type="submit" data-inline="true" value="Gửi" data-theme="b">	  
+		</form>
+    </div>
+    <!--------------first page footer----------->
+
+    <div data-role="footer">
+		<h1>&copy; 2014 HTML Boys</h1>
+    </div>
+</div>
+<!-------------------------------------------------------------
+End of First page
+-------------------------------------------------------------->
+<!--------------second page----------->
+<div data-role="page" id="pageone">
+    <!--------------second page header----------->
+    <div data-role="header">
+		<h1>JQuery Mobile Form</h1>
+    </div>
+    <!--------------second page main content----------->
+    <div data-role="main" class="ui-content">
+		<h2>Đã gửi thông tin !</h2>
+    </div>
+    <!--------------second page footer----------->
+    <div data-role="footer">
+		<h1>&copy; 2014 HTML Boys</h1>
+    </div>
+</div> 
+
+<!-------------------------------------------------------------
+End of Second page
+-------------------------------------------------------------->
+    </body>
+</html>

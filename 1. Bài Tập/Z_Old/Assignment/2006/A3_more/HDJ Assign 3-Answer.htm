@@ -1,0 +1,38 @@
+<HEAD>
+<style type="text/css">
+.menuitems
+{ background-color:#33CCFF; border:1 dashed green;
+}
+.skin0{
+position:absolute;width:150px;  border:2 solid red; top:50px; left:200px; visibility:hidden}
+</style>
+</HEAD>
+
+<BODY>
+<div id="ie5menu" class="skin0"  onClick="jump();">
+<div class="menuitems" url="http://www.dantri.com.vn">Dan tri</div>
+<div class="menuitems" url="http://www.vnexpress.net">VNExpress</div>
+<div class="menuitems" url="http://www.ngoisao.net">Ngoisao</div>
+</div>
+<a href="javascript:external.AddFavorite(location.href,'My Page')">
+Add to favorite</a>
+<script language="JavaScript1.2">
+function show() {
+ie5menu.style.visibility = "visible";
+return false;
+}
+function hide() {
+ie5menu.style.visibility = "hidden";
+}
+function jump() {
+if (event.srcElement.className == "menuitems") {
+window.location = event.srcElement.url;
+
+}
+}
+document.oncontextmenu = show;
+document.body.onclick = hide;
+
+</script>
+
+

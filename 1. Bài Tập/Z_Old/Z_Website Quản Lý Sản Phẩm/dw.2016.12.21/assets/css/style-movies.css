@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document for Movies site 
+override style.css 
+Độ rộng của bài viết và ảnh minh họa trong bài tập movies
+rất khác so với bài tập apple, google, microsoft 
+*/
+body {
+	background-image:url(../img/oscars-statuette-1.gif);	
+		background-size: 25px 40px;
+	background-repeat:repeat;
+}
+
+
+section p
+{
+	width: 750px;
+	float: none;	
+}
+
+
+.movie-info p
+{
+	width:500px;
+	float:left;	
+}
+
+.movie-info img
+{
+	width:235px;
+	display:block;
+	float:right;	
+	padding-right: 10px;
+}
+
+
+
+
+

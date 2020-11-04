@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Form Validation</title>
+</head>
+<body>
+    <!--
+    Validate form kiểu này không hay bằng viết mã JavaScript tách biệt.
+        Kể cả form bị sai thì nó vẫn submit.
+        Nên dùng e.preventDefault() vì lối viết này sổ mã tự động rất tốt.    
+    -->
+    <form onsubmit="validateForm(this);">
+        <label>Input:</label>
+        <input type="text" name="fullname"/>
+
+        <input type="submit" />
+    </form>
+
+    <script>
+        function validateForm(form)
+        {
+            if(form.fullname.value=="")
+            {
+                alert("Error-name empty");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

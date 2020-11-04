@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Home</title>
+<style>
+
+* 
+{ 
+    box-sizing: border-box; 
+} 
+
+body    
+{ 
+    margin: 0; 
+    padding: 0 5%; 
+    font: Helvetica, 0.99em, black;
+}
+
+main 
+{ 
+    width: 70%; 
+}
+
+aside   
+{ 
+    width: 30%; 
+}
+
+main, aside
+{
+	float: left;
+	padding: 0;
+	min-height: 600px;
+}
+
+header h1 
+{
+	padding: 30px; 
+	font-family: Arial, Helvetica, sans-serif
+}
+
+
+nav 
+{
+	clear: both;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+	background-color: #e7e7e7;	
+}
+
+nav a
+{
+	color: #999999;
+	font-weight: bold;
+	text-align: center;		
+	text-decoration: none;
+
+	width: 300px;
+	padding: 5px;
+	background: #e7e7e7;
+	
+	
+}
+
+nav a:hover
+{
+	background: #e7e7e7;
+	color: black;
+	width: 300px;
+	text-align: center;
+	text-decoration: none;
+	border-bottom: solid 3px orange;
+}
+
+article img
+{
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+}
+
+aside a img
+{
+	display: block;
+	width: 284px;
+	margin: 15px;
+
+	transition: transform 1s;
+}
+
+aside a img:hover
+{
+    border: 1px gray solid;
+    transform: scale(1.1);
+}
+
+footer
+{
+	clear: both;
+	padding: 10px;
+	background-color: #003062;		
+	
+	color: white;
+	text-align: center;
+}
+
+footer a 
+{
+	color: white;
+	text-decoration: none;
+}
+
+label, input, select, span, textarea 
+{
+	display: block;
+	float: left;
+}
+
+label 
+{
+	clear: left;
+	width: 150px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+input, select, textarea
+{
+    margin:  0 0 10px 0;	
+}
+
+.clear_float 
+{
+    clear: both;
+}
+
+fieldset 
+{
+    background: lightgray;
+    border: 1px solid darkgray;
+    margin: 30px 0;
+    padding: 15px;
+}
+
+legend 
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form 
+{
+	width: 60%;
+	margin: auto;
+}
+
+</style>
+</head>
+
+<body>
+	<header>
+        <img src="logo.png" style="display:block; float: left;"/>
+        
+		<h1 style="float: left;width: 70%; text-align:center;">Welcome to ...</h1>
+		
+		<nav>
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+			<a href="#">Link 4</a>
+			<a href="#">Link 5</a>
+			<a href="#">Link 6</a>
+		</nav>
+	</header>
+            
+    <main>
+        <article>
+            <h1>Head 1, Head 1, Head 1</h1>
+
+            <img src="slide1.jpg" />
+            
+            <p>
+                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            </p>
+        </article>
+            	
+        <hr />
+        <h1>Head 1, Head 1, Head 1</h1>
+                        
+        <form action="" method="post">
+            <fieldset>
+
+                <legend>your info:</legend>
+				<label>Full Name:</label>
+				<input type="text" name="fullname" required pattern="^[a-zA-Z]{2,}(?: [a-zA-Z]+){0,2}$" title="Bắt đầu với từ,tối thiểu là 10 ký tự và nhiều nhất là 30 ký tự" placeholder="Le Minh Hoa"/>
+
+				<label>Email:</label>
+				<input type="email" name="email" required pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" placeholder="you@where.com" />
+
+				<label>Age:</label>
+				<input type="number" name="age" required min="15" max="45" placeholder="from 15-45" style="width: 160px;"/>
+
+				<label>Interested:</label>   
+				<select name="interested" required>
+					<option value="arts">Arts</option>
+					<option value="business">Business</option>
+					<option value="computing">Computing</option>
+					<option value="dentistry">Dentistry</option>
+					<option value="design">Design</option>
+					<option value="engineering">Engineering</option>
+					<option value="law">Law</option>
+					<option value="medicine">Medicine</option>
+					<option value="music">Music</option>
+					<option value="science">Science</option>
+				</select>
+
+				<label>Address:</label>
+				<textarea name="address" maxlength="150" placeholder="Maximum 150 characters" required></textarea>
+
+				<label>Describe yourself:</label>
+				<textarea name="describe" maxlength="150" placeholder="Maximum 150 characters" required></textarea>
+
+				 <label>&nbsp;</label>
+				<input type="submit" value="Send"/>   
+            </fieldset>             	
+                               
+        </form>
+    </main>
+
+    <aside>
+        <h4>Head 4, Head 4, Head 4</h4>
+        <a href="#"><img src="cambridge.jpg" alt="Ảnh 1"/></a>
+        <a href="#"><img src="oxford.png" alt="Ảnh 2"/></a>
+        <a href="#"><img src="mitsd.jpg" alt="Ảnh 3"/></a>
+        <a href="#"><img src="mit.jpg" alt="Ảnh 4"/></a>
+        <a href="#"><img src="chicago.png" alt="Ảnh 5"/></a>
+    </aside>
+       
+        
+   <footer>
+       Copyright &copy; 2020. Le Minh Hoa. &nbsp; All Rights Reserved. &nbsp; <a href="mailto:hoa@gmail.com">&lt;hoa@gmail.com&gt;</a>
+   </footer>
+    
+    <script>
+		
+		var imgs = ["slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg"];
+
+		var i = 0;
+
+		document.querySelector('article img').onclick = function() {
+			this.src = imgs[(++i) % imgs.length]
+		}
+	</script>
+
+	<script>
+        document.querySelector('form').onsubmit = function(e)
+        {
+        	e.preventDefault();
+
+            alert('Your info saved successfully. Thanks !');
+            
+        	this.submit();
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Temp Movies</title>
+<link rel="icon" type="image/x-icon" href="../img/favicon-movie-youtube.ico"/>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="../css/HTML5_twoColFixRtHdr.css" rel="stylesheet" type="text/css">
+<link href="../SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome/4.6.3/css/font-awesome.css">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="../SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/shared.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+<script src="../js/google-map.js"></script>
+<script src="../js/slide.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    <a href="#" style="display:block;float:left;"><img src="../img/logo-oscars-300x300.jpg" alt="Insert Logo Here" name="Insert_logo" width="200" height="200" id="Insert_logo" style="background-color: #C6D580; display:block;" /></a>
+    <img src="../img/banner-movies-hollywoods.jpg" width="760" height="150" style="display:block;float:right;"/>
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li><a href="../index.html">Home</a>      </li>
+      <li><a href="../gallery.html">Gallery</a></li>
+      <li><a href="../order.html">Order</a>      </li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <input type="text" id="search-box"/>
+    <br class="clear_float"/>
+  </header>
+  <div class="sidebar1"><!-- TemplateBeginEditable name="Ad_1" -->Ad_1<!-- TemplateEndEditable -->
+  
+    <ul class="nav">
+      <li><a href="../index.html"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+      <li><a href="#"><i class="fa fa-image"></i>&nbsp;Gallery</a></li>
+      <li><a href="../order.html"><i class="fa fa-shopping-cart"></i>&nbsp;Order</a></li>
+      <li><a href="../contact.html"><i class="fa fa-phone"></i>&nbsp;Contact</a></li>
+    </ul>
+    <aside><!-- TemplateBeginEditable name="Ad_2" -->Ad_2<!-- TemplateEndEditable -->
+      
+    </aside>
+  <!-- end .sidebar1 --></div>
+  <article class="content"><!-- TemplateBeginEditable name="MainContent" -->MainContent<!-- TemplateEndEditable -->
+  
+  </article>
+  <footer>
+    <p>Copyright © 2016. Oscars Academy &lt;<a href="mailto:academy@oscars.com">academy@oscars.com</a>&gt;</p>
+    <address>
+      6834 Hollywood Blvd - Los Angeles CA
+    </address>
+  </footer>
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"../SpryAssets/SpryMenuBarDownHover.gif", imgRight:"../SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+<a href="#" class="scrollToTop" title="Scroll To Top" style="text-decoration:none;">&uarr;</a>
+</body>
+</html>

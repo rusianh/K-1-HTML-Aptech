@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+<style>
+    body
+    {
+        padding: 0 20%;    
+        background: lightgray;
+    }
+    
+    nav
+    {
+        background: gray;    
+    }
+    
+    nav a
+    {
+        display: block;
+        float: left;
+        padding: 10px 15px;    
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav a:hover
+    {
+        background: lightgray;   
+        color: Black; 
+    }
+    
+    .clearfloat
+    {
+        clear: both;    
+    }
+    
+    nav input
+    {
+	    display: block;
+	    float: right;
+	    margin: 8px; 
+	
+	    border-radius: 15px;
+	    border: none;
+        border-bottom:1px solid #ccc;
+	    background: white url('img/search.png') no-repeat;
+	    background-size: 35px 35px;
+	
+	    font-size: 18px;
+	    color: gray; 
+	    padding:5px 15px 5px 30px; 
+	
+	    width: 160px;
+	    transition: width 2s;
+	
+    }
+    nav input:focus
+    {
+	    width: 225px;	
+	    outline: none; 
+    }
+    
+    article
+    {
+        background: white;    
+        margin: 0;
+    }
+    
+    article img
+    {
+        width: 100%;    
+    }
+    
+    article video
+    {
+        margin: 10px auto;
+        display:block;    
+    }
+    
+    article section p
+    {
+        width: 70%;
+        float: left;    
+    }
+    
+    article section img
+    {
+        width: 30%;
+        float: left;    
+    }
+    
+    audio 
+    {
+        display: block;
+        margin: 0 auto;    
+    }
+    
+    #slideshow
+    {
+        background: white;    
+        text-align: center;
+    }
+    
+    #slideshow img 
+    {
+        box-shadow: 0 0 20px lightgray;    
+    }
+    
+    
+    footer
+    {
+        background: gray;
+        color: white;
+        padding: 10px;    
+    }
+</style>
+</head>
+<body>
+<nav>
+    <a href="home.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="order.html">Order</a>
+    <a href="gallery.html#phone">iPhone</a>
+    <a href="gallery.html#tablet">iPad</a>
+    <a href="gallery.html#laptop">iMac</a>
+
+    <input type="text" class/>
+    <br class="clearfloat"/>
+</nav>
+
+<div id="slideshow">
+		<script src="slide.js" type="text/javascript"></script>
+        <script>
+            slide.imgs = [
+                "img/slide_apple_imac.png",
+                "img/slide_apple_ipad.jpg",
+                "img/slide_apple_iphone.jpg",
+                "img/slide_apple_iphone6_bigger.jpg",
+				"img/slide_apple_iwatch.png",
+				"img/slide_apple_tv.png",
+            ];
+
+            slide.show_duration = 4; // seconds
+            slide.run();
+
+            slide.thumb_style_highlighted = 'border: dashed brown 5px';
+            slide.thumbnails();
+
+            //slide.previous_next_entities();
+            //slide.previous_next_icons();
+            //slide.paging();
+        </script>
+</div>
+
+<article>
+    <audio  autoplay controls>
+        <source src="multimedia/song.mp3" type="audio/mp3">
+    </audio>
+  <section id="laptop">
+  	<h2>iMac</h2>
+    <p>The iMac packs high-performance processors into an aluminum and glass enclosure with up to 40 percent less volume than its predecessor and an edge that measures just 5 mm thin. The idea behind iMac has never wavered: to craft the ultimate desktop experience. The best display, paired with high-performance processors, graphics, and storage — all within an incredibly thin, seamless enclosure. And that commitment continues with the all-new 21.5‑inch iMac with Retina 4K display. Like the revolutionary 27‑inch 5K model, it delivers such spectacular image quality that everything else around you seems to disappear. Adding up to the most immersive iMac experience yet — and another big, beautiful step forward.</p>
+    <img src="img/product-info-img-imac.jpg"/>
+    <br class="clearfloat">
+  </section>
+  
+  <section id="tablet">
+  	<h2>iPad</h2>
+    <p>iPad has always offered a uniquely simple yet powerful and immersive experience. It’s an astounding piece of glass, capable of unlocking new ways of thinking, creating, and learning. Now, with its expansive Retina display and uncompromising performance, iPad Pro adds a new dimension to everything you do. Like nothing before it, iPad Pro lets you be more creative and more productive — at an entirely new scale. iPad Pro is more than the next generation of iPad — it’s an uncompromising vision of personal computing for the modern world. It puts incredible power that leaps past most portable PCs at your fingertips. It makes even complex work as natural as touching, swiping, or writing with a pencil. And whether you choose the 12.9-inch model or the new 9.7-inch model, iPad Pro is more capable, versatile, and portable than anything that’s come before. In a word, super.</p>
+    <img src="img/product-info-img-ipad.jpg"/>
+    <br class="clearfloat">
+  </section>
+  
+  <section id="phone">
+  	<h2>iPhone</h2>
+    <p>iPhone 7 and iPhone 7 Plus dramatically improve every aspect of the iPhone experience, making them the best, most advanced iPhones ever featuring breakthrough new camera systems, the best battery life ever on an iPhone, and water and dust resistance. AirPods introduce an effortless wireless listening experience that has never been possible before, packed with high quality audio and long battery life. iPhone SE is the most powerful phone with a 4-inch display.iPhone 7 dramatically improves the most important aspects of the iPhone experience. It introduces advanced new camera systems. The best performance and battery life ever in an iPhone. Immersive stereo speakers. The brightest, most colorful iPhone display. Splash and water resistance.1 And it looks every bit as powerful as it is. This is iPhone 7. </p>
+    <img src="img/product-info-img-iphone.jpg"/>
+    <br class="clearfloat">
+  </section>
+</article>
+
+<footer>
+    Copyright ©2016. Apple Inc. All Rights Reserved. &lt;<a href="mailto:your@gmail.com">your@gmail.com</a>&gt;
+</footer>
+</body>
+</html>

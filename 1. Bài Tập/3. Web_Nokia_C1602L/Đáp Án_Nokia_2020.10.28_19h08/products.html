@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <nav style="text-align: center;">
+        <a href="#"><img src="images/NokiaAsha503.jpg"   style="width:5%;"/></a>
+        <a href="#"><img src="images/NokiaLumia2520.jpg" style="width:5%;"/></a>
+        <a href="#"><img src="images/NokiaLumia525.jpg"  style="width:5%;"/></a>
+    </nav>
+    <br />
+    <img id="slide" src="images/NokiaAsha503.jpg" style="display:block;margin: 0 auto;"/>
+
+    <script>
+        // Truy cập vào 1 mảng các thẻ img nằm trong nav
+        document.querySelectorAll('nav img').forEach(function (e) {
+            // với mỗi thẻ img đó, can thiệp vào hành vi onclick của nó
+            e.onclick = function () {
+                //alert('test: '+e.src);
+
+                // Cập nhật src của img slideshow bằng src của img trong nav
+                document.querySelector('#slide').src = e.src;
+
+            }
+        });
+    </script>
+</body>
+</html>

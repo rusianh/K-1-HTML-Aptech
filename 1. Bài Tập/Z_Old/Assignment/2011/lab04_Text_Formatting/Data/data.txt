@@ -1,0 +1,20 @@
+NOUNS
+A noun represents a person, place, animal, thing or an idea.
+
+Kinds of noun
+Nouns are classified as follows: 
+1.Proper: It is the name of a particular object, whether person, place, animal, idea or thing.
+2.Common: It is the name possessed by things in general.
+3.Collective: It is the name representing a group of things.
+4.Abstract: It is the name representing qualities, emotions, conditions or actions.
+PRONOUNS
+A pronoun is a word used in place of a noun. A pronoun is generally used to avoid repetition of a noun.
+
+Kinds of pronoun
+Pronouns are classified as follows: 
+1.Personal pronouns: It refers to a specific noun and used as a substitute of the noun.
+2.Interrogative pronouns: It stands as the answer to the question about a person, place or a thing.
+3.Indefinite pronouns: It is used to refer to a person, thing or a place that are unknown.
+4.Relative pronouns: It relates to a noun, pronoun, word or expression preceding it in the sentence, and at the same time connects two statements.
+5.Demonstrative pronouns: A noun or pronoun is specified and identified by it
+6.Reflexive pronouns: It usually follows a noun or a pronoun and used to emphasize the subject.

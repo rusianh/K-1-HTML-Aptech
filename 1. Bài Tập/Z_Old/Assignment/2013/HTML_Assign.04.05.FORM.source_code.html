@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Form Demo</title>
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	/*background-color: cyan;*/
+	
+}
+label, input ,select,progress,meter{
+	display: block;
+	float: left;
+}
+label {
+	clear: left;
+	
+	width: 11em;
+	text-align: right;
+	margin-right: 1em;
+}
+input ,select{
+    margin:  0 0 .5em 0;	/* top right bottom left */
+}
+.clear_float {
+	clear: both;
+	height: 0px;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+/* more style for fieldset and legend : 
+Can keep this part from the LAB */
+/*
+ @todo.1 Add more styles to fieldsets and legends.
+ @todo.1 Thêm kiểu cách cho khung thông tin và chú thích của khung.
+ */
+fieldset {
+    background-color:  #dfdfdf;
+    border:  1px solid #ccc;
+    margin:  2em 0;
+    padding:  1em;
+}
+
+fieldset fieldset {
+    background-color:  #efefef;
+    margin:  1em 0;
+}
+
+legend {
+    font-size:  1.0em;
+    font-weight:  bold;
+    position:  relative;
+    top:  -.4em;
+}
+
+fieldset fieldset legend {
+    font-size:  1.2em;
+}
+
+form {
+	width: 70%;
+	margin: auto;
+}
+/* @todo make them center-aligned inside the div 
+may be we have to use padding with some precise calculation */
+#form_buttons input {
+	width: 10em;
+}
+</style>
+</head>
+<body>
+<form>
+
+	<fieldset id="fs_name">
+		<legend>Họ và Tên</legend>
+		
+		<label>Tước Vị:</label>
+		<select>
+			<option>Mr.</option>
+			<option>Mrs.</option>
+			<option>Ms.</option>
+		</select>
+		
+		<label>Họ:</label>
+		<input name="surname" type="text">
+		
+		<label>Tên:</label>
+		<input type="text"/>
+		
+		<br class="clear_float">
+	</fieldset>
+	
+	<fieldset id="fs_birthday">
+		<legend>Ngày sinh</legend>
+		
+		<label>Ngày:</label>
+		<input type="date"/>
+		
+		<label>Giờ:</label>
+		<input type="time"/>
+		
+		<br class="clear_float">
+	</fieldset>
+	
+	<fieldset id="fs_address">
+		<legend>Địa Chỉ</legend>
+		
+		<label>Địa chỉ nhà:</label>
+		<input type="text" style="width: 22em;"/>
+		
+		<label>Mã Bưu Điện:</label>
+		<input type="number"/>
+		
+		<br class="clear_float">
+	</fieldset>
+	
+	<fieldset id="fs_contact">
+		<legend>Thông tin liên hệ</legend>
+		
+		<label>Điện Thoại:</label>
+		<input type="tel" />
+		
+		<label>Email:</label>
+		<input type="email"/>
+		
+		<label>Website</label>
+		<input type="url"/>
+		
+		<br class="clear_float">
+	</fieldset>
+	
+	<fieldset id="fs_favorite">
+		<legend>Sở Thích cá nhân</legend>
+		
+		<label>Đọc sách</label>
+		<input type="checkbox"/>
+		
+		<label>Nghe nhạc</label>
+		<input type="checkbox"/>
+		
+		<label>Xem phim</label>
+		<input type="checkbox"/>
+		
+		<label>Màu ưa thích</label>
+		<input type="color"/>
+		
+		<br class="clear_float">
+	</fieldset>
+	
+	<fieldset id="fs_payment">
+		<legend>Phương Thức Thanh Toán</legend>
+		
+		<fieldset id="fs_creditcard">
+			<legend>Thẻ Tín Dụng</legend>
+			
+				<label>Visa</label>
+            	<input type="radio" name="card"/>
+            	
+            	<label>Mastercard</label>
+            	<input type="radio" name="card"/>
+            	
+            	<label>Discover</label>
+            	<input type="radio" name="card"/>
+			<br class="clear_float">
+		</fieldset>
+		
+		<label>Số thẻ:</label>
+		<input type="number" />
+		<label>Ngày Hết Hạn:</label>
+		<input type="date"/>
+		
+		<br class="clear_float">
+	</fieldset>
+	
+	<fieldset id="fs_document">
+		<legend>Giấy Tờ Cá Nhân</legend>
+		
+		<label>Tài liệu:</label>
+		<input type="file"/>
+		
+		<label>Tải về 30%</label>
+		<progress value="30" max="100"></progress>
+		
+		<br class="clear_float">
+	</fieldset>
+	
+	<fieldset id="fs_health_index">
+		<legend>Chỉ Số Sức Khỏe</legend>
+		
+		<label>Chiều cao (cm):</label>
+		<input type="number" min="150" max="200" value="172" step="1"/>
+		
+		<label>Cân Nặng [45kg-100kg]:</label>
+		<input type="range" min="45" max="100"/>
+		
+		<label>Nhịp tim[60-100 nhịp/phút]:</label>
+		<meter min="60" max="100" value="90"></meter>
+		
+		<br class="clear_float">
+	</fieldset>
+	
+	<div id="form_buttons">
+    	<input type="submit" value="Gửi Thông Tin"/>
+        <input name="Reset" type="button" value="Hủy">
+    </div>
+</form>
+</body>
+</html>

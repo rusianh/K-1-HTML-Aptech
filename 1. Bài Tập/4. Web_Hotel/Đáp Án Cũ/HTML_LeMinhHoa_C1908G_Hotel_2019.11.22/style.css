@@ -1,0 +1,160 @@
+﻿/* Quy Cách Cho Form Register: start */
+        form 
+        {
+            width: 25%;
+            margin: auto;
+        }
+
+        form h1 
+        {
+            border: darkgray 2px solid;
+            text-align: center;
+            padding: 10px;
+            background: lightgray;
+        }
+
+        fieldset 
+        {
+            border: darkgray 2px solid;
+            background: lightgray;
+        }
+
+        label, input, select, button 
+        {
+            display: block;
+            float: left;
+        }
+
+               
+        label 
+        {
+            clear: left;
+            width: 9em;
+        }
+
+        input, select 
+        {
+            margin: 0 0.5em 0.5em 0;
+        }
+
+        .clear_both 
+        {
+            clear: both;
+        }
+/*Quy Cách Cho Form Register: end ----------------------*/
+
+/* Quy Cách Cho Bố Cục Toàn Trang: start */
+body 
+{
+
+}
+
+aside {
+    border: 1px solid darkgray;
+    background: lightgray;
+    float: left;
+    width: 20%;
+}
+
+section 
+{
+    border: 1px solid darkgray;
+    background: lightgray;
+    width: 79%;
+    float: right;
+}
+
+aside, section 
+{
+     min-height: 550px;
+}
+
+h2 {text-align:center;}
+
+/* Quy Cách Cho Bố Cục Toàn Trang: end ---------------------------------*/
+
+
+/* Quy Cách Cho Menu bên trái: start */
+#link_home
+{
+    display:block;
+    background: url("images/Home.jpg") no-repeat center;
+    height: 31px;
+}
+#link_home:hover 
+{
+    background: url("images/Homeover.jpg") no-repeat center;
+}
+
+#link_reservation
+{
+    display:block;
+    background: url("images/Reservation.jpg") no-repeat center;
+    height: 31px;
+}
+#link_reservation:hover 
+{
+    background: url("images/Reservationover.jpg") no-repeat center;
+}
+
+#link_contact
+{
+    display:block;
+    background: url("images/Contact.jpg") no-repeat center;
+    height: 31px;
+}
+#link_contact:hover 
+{
+    background: url("images/Contactover.jpg") no-repeat center;
+}
+
+/* Quy Cách Cho Menu bên trái: end ------------------------------------------*/
+
+
+/* Quy Cách Cho Nội Dung Chính bên Phải: start */
+section div a 
+{
+    text-decoration: none;
+}
+
+section div a:hover
+{
+    color:red;
+    text-decoration:underline;
+}
+
+section div 
+{
+    float: left;
+    margin: 0 20% 0 20%;
+}
+
+section div a b 
+{
+    display:block;
+     text-align: center;
+}
+/* Quy Cách Cho Nội Dung Chính bên Phải: end --------------------------------------*/
+
+
+/* Quy Cách Chung Cho Các Nút Có Ảnh Nền */
+.bg_button
+{
+    height: 31px;
+    width: 120px;
+}
+
+/* Quy Cách Cho Nút Back: start */
+.back
+{
+    display:block;
+    background: url("images/Back.jpg") no-repeat center;
+}
+.back:hover 
+{
+    background: url("images/Backdown.jpg") no-repeat center;
+}
+/* Quy Cách Cho Nút Back: end -----------------------------------------------------*/
+
+
+
